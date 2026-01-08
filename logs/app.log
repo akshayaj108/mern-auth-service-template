@@ -1,0 +1,60 @@
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-21T11:07:53.336Z'
+}
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-21T11:14:19.268Z'
+}
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-21T11:55:31.010Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Bad Request Example',
+  level: 'error',
+  timestamp: '2025-12-21T11:56:48.455Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Bad Request Example',
+  level: 'error',
+  timestamp: '2025-12-21T11:56:59.389Z'
+}
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-21T12:05:26.239Z'
+}
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-21T12:07:30.284Z'
+}
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-21T12:10:02.147Z'
+}
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-21T13:42:11.936Z'
+}
+{
+  message: 'Server started on port 5000',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2025-12-28T05:54:58.035Z'
+}
