@@ -11,7 +11,7 @@
     "target": "es2022",
     // "types": ["node"],
     // For nodejs:
-    "lib": ["esnext"],
+    "lib": ["ES6"],
     "types": ["node", "jest"],
     // and npm install -D @types/node
 
@@ -43,5 +43,7 @@
   },
   "include": [
     "src/**/*.ts",
-  ]
+  ],
+  "emitDecoratorMetadata": true,
+  "experimentalDecorators": true
 }
