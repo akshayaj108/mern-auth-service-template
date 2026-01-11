@@ -728,3 +728,378 @@
   message: 'User has been registerd',
   timestamp: '2026-01-11T06:41:36.405Z'
 }
+{
+  serviceName: 'auth-service',
+  id: 39,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:53:46.500Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 40,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:53:46.566Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 41,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:53:46.594Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 42,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:53:46.651Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 43,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:53:46.687Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 44,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:54:27.491Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 45,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:54:27.520Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 46,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:54:27.545Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 47,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:54:27.577Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 48,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:54:27.601Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:54:56.965Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:54:57.047Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:54:57.094Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:54:57.147Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:54:57.195Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:55:33.860Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:55:33.922Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:55:33.957Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:55:34.002Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Failed to store data in database',
+  level: 'error',
+  timestamp: '2026-01-11T06:55:34.038Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 59,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:56:22.357Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 60,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:56:22.386Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 61,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:56:22.411Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 62,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:56:22.438Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 63,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:56:22.467Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 64,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:57:14.007Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 65,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:57:14.029Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 66,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:57:14.050Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 67,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:57:14.076Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 68,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:57:14.100Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 69,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:01:12.258Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 70,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:01:12.280Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 71,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:01:12.324Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 72,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:01:12.369Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 73,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:01:12.395Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 74,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:40.514Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 75,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:40.559Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 76,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:40.604Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 77,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:40.644Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 78,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:40.687Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 79,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:58.341Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 80,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:58.421Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 81,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:58.514Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 82,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:58.561Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 83,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:02:58.596Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 84,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:02.470Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 85,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:02.535Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 86,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:02.584Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 87,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:02.612Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 88,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:02.636Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 89,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:30.720Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 90,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:30.788Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 91,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:30.860Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 92,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:30.896Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 93,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T07:03:30.925Z'
+}
