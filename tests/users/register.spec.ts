@@ -24,15 +24,16 @@ describe("POST /auth/register", () => {
   });
 
   describe("happy path (given all fields)", () => {
+    const data = {
+      firstName: "Akshay",
+      lastName: "J",
+      email: "akshay.j@gamil.com",
+      pass: "secret",
+    };
     it("should return the 201 status code", async () => {
       //to write any test we have formula is AAA
       //Arrange
-      const userData = {
-        firstName: "Akshay",
-        lastName: "J",
-        email: "akshay.j@gamil.com",
-        pass: "secret",
-      };
+      const userData = data;
 
       //Act
       const response = await request(app).post("/auth/register").send(userData);
@@ -43,12 +44,8 @@ describe("POST /auth/register", () => {
 
     it("should return json response", async () => {
       //Arrange
-      const userData = {
-        firstName: "Akshay",
-        lastName: "J",
-        email: "akshay.j@gamil.com",
-        pass: "secret",
-      };
+
+      const userData = data;
 
       //Act
       const response = await request(app).post("/auth/register").send(userData);
@@ -61,12 +58,7 @@ describe("POST /auth/register", () => {
     });
     it("should persist user data in DB", async () => {
       //ararnge
-      const userData = {
-        firstName: "Akshay",
-        lastName: "J",
-        email: "akshay.j@gamil.com",
-        pass: "secret",
-      };
+      const userData = data;
       //act
       await request(app).post("/auth/register").send(userData);
       //assert
@@ -76,6 +68,14 @@ describe("POST /auth/register", () => {
       expect(users[0].firstName).toBe(userData.firstName);
       expect(users[0].lastName).toBe(userData.lastName);
       expect(users[0].email).toBe(userData.email);
+    });
+    it("should return id of created user", async () => {
+      //arrange
+      const userData = data;
+      //act
+      const response = await request(app).post("/auth/register").send(userData);
+      //assert
+      expect(response.body).toHaveProperty("id");
     });
   });
   describe("sad path (Fields are missing", () => {});
