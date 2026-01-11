@@ -7,6 +7,10 @@ module.exports = {
   testEnvironment: "node",
   transform: {
     ...tsJestTransformCfg,
+    '^.+\\.tsx?$': ['ts-jest', {
+      isolatedModules: true,
+      tsconfig: 'tsconfig.json' // Explicitly tell Jest to use your config
+    }],
   },
   verbose:true
 };

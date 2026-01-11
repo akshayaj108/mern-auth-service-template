@@ -10,3 +10,645 @@
   level: 'error',
   timestamp: '2025-12-21T11:56:59.389Z'
 }
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot destructure property 'firstName' of 'req.body' as it is undefined.",
+  level: 'error',
+  timestamp: '2026-01-11T02:38:56.377Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "email" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:40:02.890Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "email" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:40:04.534Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "pass" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:43:13.246Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:44:45.468Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:44:45.509Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:45:20.535Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:45:20.566Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:46:08.462Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:46:08.494Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:47:33.249Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:47:33.329Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:47:39.080Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "firstName" of relation "user" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-01-11T02:47:39.139Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:41:40.630Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:41:40.803Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:41:41.003Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:43:01.356Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:43:01.386Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:43:01.404Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:43:43.242Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:43:43.272Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:43:43.289Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:50:19.961Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:50:19.988Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:50:20.009Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:50:48.655Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:50:48.683Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:50:48.705Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:09.740Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:09.869Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:09.888Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:12.633Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:12.662Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:12.679Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:42.967Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:43.013Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:52:43.036Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:54:30.351Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:54:30.390Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:54:30.435Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:54:58.172Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:54:58.215Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:54:58.240Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:55:36.660Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:55:36.722Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:55:36.739Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:10.343Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:10.387Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:10.410Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:24.646Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:24.674Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:24.693Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:42.524Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:42.558Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T03:58:42.600Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:02:10.445Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:02:10.477Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:02:10.495Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:02:34.022Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:02:34.054Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:02:34.072Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:03:48.607Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:03:48.661Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:03:48.691Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:03:55.473Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:03:55.555Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:03:55.571Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:20.134Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:20.244Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:20.265Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:30.544Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:30.630Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:30.646Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:58.485Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:58.516Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:15:58.646Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:16:47.617Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:16:47.650Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:16:47.773Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:17:53.829Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:17:53.855Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:17:53.875Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:18:26.286Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:18:26.315Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:18:26.335Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:23:03.252Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:23:03.279Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:23:03.297Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:23:48.558Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:23:48.598Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:23:48.672Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:24:16.166Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:24:16.194Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:24:16.211Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:24:25.978Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:24:26.049Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:24:26.110Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:25:22.467Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:25:22.504Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:25:22.524Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:34:23.749Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:34:23.842Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'userService')",
+  level: 'error',
+  timestamp: '2026-01-11T04:34:23.861Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'save')",
+  level: 'error',
+  timestamp: '2026-01-11T04:44:42.809Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'save')",
+  level: 'error',
+  timestamp: '2026-01-11T04:44:43.108Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot read properties of undefined (reading 'save')",
+  level: 'error',
+  timestamp: '2026-01-11T04:44:43.312Z'
+}

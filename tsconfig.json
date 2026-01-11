@@ -33,6 +33,9 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
