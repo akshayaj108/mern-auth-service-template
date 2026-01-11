@@ -14,7 +14,8 @@ describe("POST /auth/register", () => {
   });
 
   beforeEach(async () => {
-    await truncateTable(connections);
+    await connections.dropDatabase();
+    await connections.synchronize();
   });
 
   afterAll(async () => {
@@ -89,6 +90,30 @@ describe("POST /auth/register", () => {
       const users = await userRepository.find();
       expect(users[0]).toHaveProperty("role");
       expect(users[0].role).toBe(Roles.CUSTOMER);
+    });
+    it("should stored only a hashed password", async () => {
+      //arrange
+      const userData = data;
+      //act
+      await request(app).post("/auth/register").send(userData);
+      //assert
+      const userRepository = connections.getRepository(User);
+      const users = await userRepository.find();
+      expect(users[0].pass).not.toBe(userData.pass);
+      expect(users[0].pass).toHaveLength(60);
+      expect(users[0].pass).toMatch(/^\$2b\$\d+\$/);
+    });
+    it("should return 400 if user email is already exists in database", async () => {
+      //arrange
+      const userData = data;
+      const userRepository = connections.getRepository(User);
+      await userRepository.save({ ...userData, role: Roles.CUSTOMER });
+      //act
+      const response = await request(app).post("/auth/register").send(userData);
+      //assert
+      const users = await userRepository.find();
+      expect(response.statusCode).toBe(400);
+      expect(users).toHaveLength(1);
     });
   });
   describe("sad path (Fields are missing", () => {});
