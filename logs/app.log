@@ -700,3 +700,31 @@
   level: 'error',
   timestamp: '2026-01-11T04:44:43.312Z'
 }
+{
+  serviceName: 'auth-service',
+  id: 31,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:41:36.331Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 32,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:41:36.358Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 33,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:41:36.379Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 34,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-11T06:41:36.405Z'
+}
