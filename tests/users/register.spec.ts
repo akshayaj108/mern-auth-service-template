@@ -8,6 +8,12 @@ import { User } from "../../src/entity/User";
 import { Roles } from "../../src/constants";
 
 describe("POST /auth/register", () => {
+  const data = {
+    firstName: "Akshay",
+    lastName: "J",
+    email: "akshay.j@gamil.com",
+    pass: "secret",
+  };
   let connections: DataSource;
   beforeAll(async () => {
     connections = await AppDataSource.initialize();
@@ -25,13 +31,7 @@ describe("POST /auth/register", () => {
     }
   });
 
-  describe("happy path (given all fields)", () => {
-    const data = {
-      firstName: "Akshay",
-      lastName: "J",
-      email: "akshay.j@gamil.com",
-      pass: "secret",
-    };
+  describe("given all fields", () => {
     it("should return the 201 status code", async () => {
       //to write any test we have formula is AAA
       //Arrange
@@ -116,5 +116,17 @@ describe("POST /auth/register", () => {
       expect(users).toHaveLength(1);
     });
   });
-  describe("sad path (Fields are missing", () => {});
+  describe("Fields are missing", () => {
+    it("should return 400 status code if email field is missing", async () => {
+      //ararnge
+      const userData = { ...data, email: "" };
+      const userRepository = connections.getRepository(User);
+      const users = await userRepository.find();
+      //act
+      const response = await request(app).post("/auth/register").send(userData);
+      //assert
+      expect(response.statusCode).toBe(400);
+      expect(users).toHaveLength(0);
+    });
+  });
 });
