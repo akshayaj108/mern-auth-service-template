@@ -7,3 +7,4 @@ temp/
 .env.dev
 .env.test
 .emv.prod
+certs/

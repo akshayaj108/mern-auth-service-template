@@ -3,7 +3,7 @@ import "reflect-metadata";
 import app from "../../src/app";
 import { DataSource } from "typeorm";
 import { AppDataSource } from "../../src/data-source";
-import { truncateTable } from "../utils";
+import { isJwt, truncateTable } from "../utils";
 import { User } from "../../src/entity/User";
 import { Roles } from "../../src/constants";
 
@@ -115,6 +115,34 @@ describe("POST /auth/register", () => {
       expect(response.statusCode).toBe(400);
       expect(users).toHaveLength(1);
     });
+    it("should return access token and refresh token inside a cookies", async () => {
+      //arrange
+      const userData = data;
+      //act
+      const response = await request(app).post("/auth/register").send(userData);
+      //assert
+      const headers = response.headers as Record<
+        string,
+        string | string[] | undefined
+      >;
+      let accessToken = null;
+      let refreshToken = null;
+      const cookies = headers["set-cookie"] || [];
+      if (Array.isArray(cookies)) {
+        cookies.forEach((cookie) => {
+          if (cookie?.startsWith("accessToken=")) {
+            accessToken = cookie?.split(";")[0].split("=")[1];
+          }
+          if (cookie?.startsWith("refreshToken=")) {
+            refreshToken = cookie?.split(";")[0].split("=")[1];
+          }
+        });
+      }
+      expect(accessToken).not.toBeNull();
+      expect(refreshToken).not.toBeNull();
+      expect(isJwt(accessToken)).toBeTruthy();
+      expect(isJwt(refreshToken)).toBeTruthy();
+    });
   });
   describe("Fields are missing", () => {
     it("should return 400 status code if email field is missing", async () => {
@@ -169,9 +197,6 @@ describe("POST /auth/register", () => {
       //act
       const response = await request(app).post("/auth/register").send(userData);
       //assert
-      // const userRepository = connections.getRepository(User);
-      // const users = await userRepository.find();
-      // const user = users[0];
       expect(response.statusCode).toBe(400);
     });
   });
