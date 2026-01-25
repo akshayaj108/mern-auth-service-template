@@ -2,10 +2,11 @@ import request from "supertest";
 import "reflect-metadata";
 import app from "../../src/app";
 import { DataSource } from "typeorm";
-import { AppDataSource } from "../../src/data-source";
-import { isJwt, truncateTable } from "../utils";
+import { AppDataSource } from "../../src/config/data-source";
+import { isJwt } from "../utils";
 import { User } from "../../src/entity/User";
 import { Roles } from "../../src/constants";
+import { RefreshToken } from "../../src/entity/RefreshToken";
 
 describe("POST /auth/register", () => {
   const data = {
@@ -25,7 +26,6 @@ describe("POST /auth/register", () => {
   });
 
   afterAll(async () => {
-    await truncateTable(connections);
     if (connections && connections.isInitialized) {
       await connections.destroy();
     }
@@ -142,6 +142,21 @@ describe("POST /auth/register", () => {
       expect(refreshToken).not.toBeNull();
       expect(isJwt(accessToken)).toBeTruthy();
       expect(isJwt(refreshToken)).toBeTruthy();
+    });
+    it("should store refresh token in database", async () => {
+      //Arrange
+      const userData = data;
+      //Act
+      const response = await request(app).post("/auth/register").send(userData);
+      //Assert
+      const refreshTokenRepo = connections?.getRepository(RefreshToken);
+      // const refreshTokenList = await refreshTokenRepo?.find();
+      // expect(refreshTokenList).toHaveLength(1);
+      const token = await refreshTokenRepo
+        .createQueryBuilder("refreshToken")
+        .where("refreshToken.userId = :userId", { userId: response.body.id })
+        .getMany();
+      expect(token).toHaveLength(1);
     });
   });
   describe("Fields are missing", () => {

@@ -1,5 +1,5 @@
 import winston from "winston";
-// import { CONFIG } from './index.js';
+import { CONFIG } from ".";
 
 const logger = winston.createLogger({
   level: "info",
@@ -13,6 +13,7 @@ const logger = winston.createLogger({
         winston.format.timestamp(),
         winston.format.prettyPrint(),
       ),
+      silent: CONFIG.NODE_ENV === "test",
       dirname: "logs",
       filename: "app.log",
     }),
@@ -22,6 +23,7 @@ const logger = winston.createLogger({
         winston.format.timestamp(),
         winston.format.prettyPrint(),
       ),
+      silent: CONFIG.NODE_ENV === "test",
       dirname: "logs",
       filename: "app.error.log",
     }),
@@ -31,7 +33,7 @@ const logger = winston.createLogger({
         winston.format.timestamp(),
         winston.format.prettyPrint(),
       ),
-      // silent: CONFIG.NODE_ENV === 'test',
+      silent: CONFIG.NODE_ENV === "test",
     }),
   ],
 });
