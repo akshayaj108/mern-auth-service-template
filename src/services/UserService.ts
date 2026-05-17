@@ -7,15 +7,22 @@ import bcrypt from "bcrypt";
 
 export class UserService {
   constructor(private userRepository: Repository<User>) {}
+  async findByEmail(email: string) {
+    return await this.userRepository.findOne({ where: { email: email } });
+  }
+  async getHashPassword(password: string) {
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+    return hashedPassword;
+  }
   async create({ firstName, lastName, email, pass }: UserData) {
-    const user = await this.userRepository.findOne({ where: { email: email } });
+    const user = await this.findByEmail(email);
     if (user) {
       const err = createHttpError(400, "User email is already exists");
       throw err;
     }
     try {
-      const saltRounds = 10;
-      const hashedPassword = await bcrypt.hash(pass, saltRounds);
+      const hashedPassword = await this.getHashPassword(pass);
       return await this.userRepository.save({
         firstName,
         lastName,

@@ -67,9 +67,12 @@ describe("POST /auth/register", () => {
       const userRepository = connections.getRepository(User);
       const users = await userRepository.find();
       expect(users).toHaveLength(1);
-      expect(users[0].firstName).toBe(userData.firstName);
-      expect(users[0].lastName).toBe(userData.lastName);
-      expect(users[0].email).toBe(userData.email);
+      const user = users[0];
+      expect(user).toBeDefined();
+
+      expect(user!.firstName).toBe(userData.firstName);
+      expect(user!.lastName).toBe(userData.lastName);
+      expect(user!.email).toBe(userData.email);
     });
     it("should return id of created user", async () => {
       //arrange
@@ -88,8 +91,10 @@ describe("POST /auth/register", () => {
       //assert
       const userRepository = connections.getRepository(User);
       const users = await userRepository.find();
-      expect(users[0]).toHaveProperty("role");
-      expect(users[0].role).toBe(Roles.CUSTOMER);
+      const user = users[0];
+      expect(user).toBeDefined();
+      expect(user).toHaveProperty("role");
+      expect(user!.role).toBe(Roles.CUSTOMER);
     });
     it("should stored only a hashed password", async () => {
       //arrange
@@ -99,9 +104,11 @@ describe("POST /auth/register", () => {
       //assert
       const userRepository = connections.getRepository(User);
       const users = await userRepository.find();
-      expect(users[0].pass).not.toBe(userData.pass);
-      expect(users[0].pass).toHaveLength(60);
-      expect(users[0].pass).toMatch(/^\$2b\$\d+\$/);
+      const user = users[0];
+      expect(user).toBeDefined();
+      expect(user!.pass).not.toBe(userData.pass);
+      expect(user!.pass).toHaveLength(60);
+      expect(user!.pass).toMatch(/^\$2b\$\d+\$/);
     });
     it("should return 400 if user email is already exists in database", async () => {
       //arrange
@@ -130,11 +137,13 @@ describe("POST /auth/register", () => {
       const cookies = headers["set-cookie"] || [];
       if (Array.isArray(cookies)) {
         cookies.forEach((cookie) => {
-          if (cookie?.startsWith("accessToken=")) {
-            accessToken = cookie?.split(";")[0].split("=")[1];
+          const [name, value] = cookie.split(";")[0]?.split("=") ?? [];
+          if (name === "accessToken") {
+            accessToken = value ?? null;
           }
-          if (cookie?.startsWith("refreshToken=")) {
-            refreshToken = cookie?.split(";")[0].split("=")[1];
+
+          if (name === "refreshToken") {
+            refreshToken = value ?? null;
           }
         });
       }
@@ -204,7 +213,7 @@ describe("POST /auth/register", () => {
       const userRepository = connections.getRepository(User);
       const users = await userRepository.find();
       const user = users[0];
-      expect(user.email).toBe(userData?.email.trim());
+      expect(user!.email).toBe(userData?.email.trim());
     });
     it("should return 400 status code if email is invalid", async () => {
       //ararnge

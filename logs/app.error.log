@@ -652,3 +652,33 @@
   level: 'error',
   timestamp: '2026-01-11T04:44:43.312Z'
 }
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Expected double-quoted property name in JSON at position 109 (line 6 column 3)',
+  level: 'error',
+  timestamp: '2026-01-26T11:10:31.423Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred User email is already exists',
+  level: 'error',
+  timestamp: '2026-01-26T11:11:32.816Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Email or password does not match',
+  level: 'error',
+  timestamp: '2026-01-26T11:46:34.450Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred User email is already exists',
+  level: 'error',
+  timestamp: '2026-05-15T12:07:09.920Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Email or password does not match',
+  level: 'error',
+  timestamp: '2026-05-15T15:19:54.283Z'
+}

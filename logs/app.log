@@ -1103,3 +1103,281 @@
   message: 'User has been registerd',
   timestamp: '2026-01-11T07:03:30.925Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:08:26.426Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:08:26.433Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:10:03.794Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:10:03.814Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Expected double-quoted property name in JSON at position 109 (line 6 column 3)',
+  level: 'error',
+  timestamp: '2026-01-26T11:10:31.422Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-26T11:11:29.872Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred User email is already exists',
+  level: 'error',
+  timestamp: '2026-01-26T11:11:32.815Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 2,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-26T11:12:06.645Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:17:54.353Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:17:54.360Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:21:57.310Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:21:57.317Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:24:58.102Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:24:58.109Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:45:44.268Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:45:44.276Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Email or password does not match',
+  level: 'error',
+  timestamp: '2026-01-26T11:46:34.450Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-01-26T11:47:05.608Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:52:16.781Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:52:16.789Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:54:56.723Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:54:56.731Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:59:18.412Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T11:59:18.427Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:08:37.825Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:08:37.834Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:09:22.033Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:09:22.041Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:12:45.510Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:12:45.517Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:13:04.842Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-01-26T12:13:04.849Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-15T12:05:53.313Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-15T12:05:53.322Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-15T12:07:04.179Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred User email is already exists',
+  level: 'error',
+  timestamp: '2026-05-15T12:07:09.919Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 2,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-15T12:07:29.994Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 2,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-15T15:19:41.725Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Email or password does not match',
+  level: 'error',
+  timestamp: '2026-05-15T15:19:54.282Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-15T15:20:42.545Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-17T09:47:57.259Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-17T09:47:57.272Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-17T09:48:11.956Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-17T09:52:19.945Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-17T09:52:19.960Z'
+}
