@@ -37,6 +37,7 @@ describe("POST /auth/login", () => {
           ...userData,
         });
       const response = await request(app).post("/auth/login").send(userData);
+
       //assert
       expect(response.statusCode).toBe(200);
     });

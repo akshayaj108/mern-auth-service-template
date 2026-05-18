@@ -8,7 +8,7 @@ import bcrypt from "bcrypt";
 export class UserService {
   constructor(private userRepository: Repository<User>) {}
   async findByEmail(email: string) {
-    return await this.userRepository.findOne({ where: { email: email } });
+    return await this.userRepository.findOne({ where: { email } });
   }
   async getHashPassword(password: string) {
     const saltRounds = 10;
@@ -38,5 +38,8 @@ export class UserService {
       );
       throw customError;
     }
+  }
+  async findById(id: number) {
+    return await this.userRepository.findOne({ where: { id } });
   }
 }

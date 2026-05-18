@@ -1,5 +1,5 @@
-import { NextFunction, Response } from "express";
-import { RegisterRequest } from "../types";
+import { NextFunction, Response, Request } from "express";
+import { AuthRequest, RegisterRequest } from "../types";
 import { UserService } from "../services/UserService";
 import { Logger } from "winston";
 import { validationResult } from "express-validator";
@@ -70,7 +70,7 @@ export class AuthController {
       next(error);
     }
   }
-  async login(req: RegisterRequest, res: Response, next: NextFunction) {
+  async login(req: Request, res: Response, next: NextFunction) {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
@@ -127,5 +127,9 @@ export class AuthController {
     } catch (error) {
       next(error);
     }
+  }
+  async self(req: AuthRequest, res: Response) {
+    const user = await this.userService.findById(Number(req.auth.sub));
+    res.json(user);
   }
 }

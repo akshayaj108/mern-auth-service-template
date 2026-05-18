@@ -3,11 +3,12 @@ import "reflect-metadata";
 import { HttpError } from "http-errors";
 import logger from "./config/logger";
 import authRouter from "./routes/auth";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
 app.use(express.json());
-
+app.use(cookieParser());
 app.get("/", (req, res) => {
   // const err = createHttpError(400, "Bad Request Example");
   // next(err);
