@@ -46,7 +46,7 @@ describe("POST /auth/self", () => {
     });
 
     it("should return user data", async () => {
-      //step
+      //steps
       //Register user
       const data = {
         firstName: "Akshay",
@@ -72,6 +72,33 @@ describe("POST /auth/self", () => {
         .send();
       //assert
       expect(response.body.id).toBe(userData.id);
+    });
+    it("it should not return password properties", async () => {
+      //Register user
+      const data = {
+        firstName: "Akshay",
+        lastName: "J",
+        email: "akshay.j@gamil.com",
+        pass: "secret",
+      };
+      const userRepository = connections.getRepository(User);
+      const userData = await userRepository.save({
+        ...data,
+        role: Roles.CUSTOMER,
+      });
+      //generate mock token
+      const accessToken = jwks.token({
+        sub: String(userData.id),
+        role: userData.role,
+      });
+      //arrange
+      //act
+      const response = await request(app)
+        .get("/auth/self")
+        .set("Cookie", [`accessToken=${accessToken}`])
+        .send();
+      //assert
+      expect(response.body).not.toHaveProperty("pass");
     });
   });
 });
