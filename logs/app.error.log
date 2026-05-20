@@ -700,3 +700,9 @@
   level: 'error',
   timestamp: '2026-05-20T12:08:26.286Z'
 }
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred The token has been revoked.',
+  level: 'error',
+  timestamp: '2026-05-20T13:34:38.196Z'
+}

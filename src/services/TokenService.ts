@@ -48,4 +48,7 @@ export class TokenService {
     });
     return newRefreshToken;
   }
+  async removeRefreshToken(id: number) {
+    return await this.refreshTokenRepo.delete({ id });
+  }
 }

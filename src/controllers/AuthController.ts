@@ -132,4 +132,45 @@ export class AuthController {
     const user = await this.userService.findById(Number(req.auth.sub));
     res.json({ ...user, pass: undefined });
   }
+
+  async refreshToken(req: AuthRequest, res: Response, next: NextFunction) {
+    try {
+      const payload: JwtPayload = {
+        sub: String(req.auth.sub),
+        role: req.auth.role,
+      };
+
+      const accessToken = this.tokenService.generateAccessToken(payload);
+      const user = await this.userService.findById(Number(req.auth.sub));
+      if (!user) {
+        const error = createHttpError(400, "User with token could not find");
+        next(error);
+        return;
+      }
+      //Persist the refresh token
+      const newRefreshToken = await this.tokenService.persistRefreshToken(user);
+      //update refresh token by deleting old refresh token
+      await this.tokenService.removeRefreshToken(Number(req.auth.id));
+      const refreshToken = this.tokenService.generateRefreshToken({
+        ...payload,
+        id: newRefreshToken?.id,
+      });
+      res.cookie("accessToken", accessToken, {
+        domain: "localhost",
+        sameSite: "strict",
+        maxAge: 1000 * 60 * 60, //1h
+        httpOnly: true,
+      });
+
+      res.cookie("refreshToken", refreshToken, {
+        domain: "localhost",
+        sameSite: "strict",
+        maxAge: 1000 * 60 * 60 * 24 * 365, //1y
+        httpOnly: true,
+      });
+      res.status(200).json({ id: user.id });
+    } catch (error) {
+      next(error);
+    }
+  }
 }
