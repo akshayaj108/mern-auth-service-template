@@ -100,5 +100,12 @@ describe("POST /auth/self", () => {
       //assert
       expect(response.body).not.toHaveProperty("pass");
     });
+    it("it should return 401 status code if token is missing password", async () => {
+      //arrange
+      //act
+      const response = await request(app).get("/auth/self").send();
+      //assert
+      expect(response.statusCode).toBe(401);
+    });
   });
 });

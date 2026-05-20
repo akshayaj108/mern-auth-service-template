@@ -8,3 +8,4 @@ temp/
 .env.test
 .emv.prod
 certs/
+public/

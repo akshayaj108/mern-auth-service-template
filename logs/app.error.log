@@ -682,3 +682,21 @@
   level: 'error',
   timestamp: '2026-05-15T15:19:54.283Z'
 }
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-20T12:02:25.827Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-20T12:03:47.963Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-20T12:08:26.286Z'
+}
