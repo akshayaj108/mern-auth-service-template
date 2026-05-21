@@ -1748,3 +1748,96 @@
   serviceName: 'auth-service',
   timestamp: '2026-05-20T13:35:31.315Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-20T18:22:30.258Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-20T18:22:30.277Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-20T18:22:33.787Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:16:54.367Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:16:54.382Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 3,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-21T11:18:15.310Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:18:57.862Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:18:57.870Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 3,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-21T11:19:11.424Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:20:05.206Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:20:05.218Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:26:00.407Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:26:00.418Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:26:34.199Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T11:26:34.209Z'
+}

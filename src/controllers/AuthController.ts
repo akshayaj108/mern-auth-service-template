@@ -7,6 +7,7 @@ import { JwtPayload } from "jsonwebtoken";
 import { TokenService } from "../services/TokenService";
 import createHttpError from "http-errors";
 import { CredentialsService } from "../services/CredintialService";
+import { User } from "../entity/User";
 
 export class AuthController {
   constructor(
@@ -43,28 +44,8 @@ export class AuthController {
         sub: String(user.id),
         role: user.role,
       };
+      await this.generateAndSetTokens(payload, null, res, user);
 
-      const accessToken = this.tokenService.generateAccessToken(payload);
-
-      const newRefreshToken = await this.tokenService.persistRefreshToken(user);
-
-      const refreshToken = this.tokenService.generateRefreshToken({
-        ...payload,
-        id: newRefreshToken?.id,
-      });
-      res.cookie("accessToken", accessToken, {
-        domain: "localhost",
-        sameSite: "strict",
-        maxAge: 1000 * 60 * 60, //1h
-        httpOnly: true,
-      });
-
-      res.cookie("refreshToken", refreshToken, {
-        domain: "localhost",
-        sameSite: "strict",
-        maxAge: 1000 * 60 * 60 * 24 * 365, //1y
-        httpOnly: true,
-      });
       res.status(201).json({ id: user.id });
     } catch (error) {
       next(error);
@@ -99,29 +80,8 @@ export class AuthController {
         sub: String(user.id),
         role: user.role,
       };
+      await this.generateAndSetTokens(payload, null, res, user);
 
-      const accessToken = this.tokenService.generateAccessToken(payload);
-
-      const newRefreshToken = await this.tokenService.persistRefreshToken(user);
-
-      const refreshToken = this.tokenService.generateRefreshToken({
-        ...payload,
-        id: newRefreshToken?.id,
-      });
-
-      res.cookie("accessToken", accessToken, {
-        domain: "localhost",
-        sameSite: "strict",
-        maxAge: 1000 * 60 * 60, //1h
-        httpOnly: true,
-      });
-
-      res.cookie("refreshToken", refreshToken, {
-        domain: "localhost",
-        sameSite: "strict",
-        maxAge: 1000 * 60 * 60 * 24 * 365, //1y
-        httpOnly: true,
-      });
       this.logger.info("User has been registerd", { id: user.id });
       res.status(200).json({ id: user.id });
     } catch (error) {
@@ -140,37 +100,53 @@ export class AuthController {
         role: req.auth.role,
       };
 
-      const accessToken = this.tokenService.generateAccessToken(payload);
       const user = await this.userService.findById(Number(req.auth.sub));
+
       if (!user) {
         const error = createHttpError(400, "User with token could not find");
-        next(error);
+        next!(error);
         return;
       }
-      //Persist the refresh token
-      const newRefreshToken = await this.tokenService.persistRefreshToken(user);
-      //update refresh token by deleting old refresh token
-      await this.tokenService.removeRefreshToken(Number(req.auth.id));
-      const refreshToken = this.tokenService.generateRefreshToken({
-        ...payload,
-        id: newRefreshToken?.id,
-      });
-      res.cookie("accessToken", accessToken, {
-        domain: "localhost",
-        sameSite: "strict",
-        maxAge: 1000 * 60 * 60, //1h
-        httpOnly: true,
-      });
+      await this.generateAndSetTokens(payload, req.auth.id!, res, user);
 
-      res.cookie("refreshToken", refreshToken, {
-        domain: "localhost",
-        sameSite: "strict",
-        maxAge: 1000 * 60 * 60 * 24 * 365, //1y
-        httpOnly: true,
-      });
       res.status(200).json({ id: user.id });
     } catch (error) {
       next(error);
     }
+  }
+
+  async generateAndSetTokens(
+    payload: JwtPayload,
+    refreshTokenId: string | null,
+    res: Response,
+    user: User,
+  ) {
+    const accessToken = this.tokenService.generateAccessToken(payload);
+
+    //Persist the refresh token
+    const newRefreshToken = await this.tokenService.persistRefreshToken(user!);
+    //update refresh token by deleting old refresh token
+    if (refreshTokenId) {
+      await this.tokenService.removeRefreshToken(Number(refreshTokenId));
+    }
+
+    const refreshToken = this.tokenService.generateRefreshToken({
+      ...payload,
+      id: newRefreshToken?.id,
+    });
+
+    res!.cookie("accessToken", accessToken, {
+      domain: "localhost",
+      sameSite: "strict",
+      maxAge: 1000 * 60 * 60, //1h
+      httpOnly: true,
+    });
+
+    res!.cookie("refreshToken", refreshToken, {
+      domain: "localhost",
+      sameSite: "strict",
+      maxAge: 1000 * 60 * 60 * 24 * 365, //1y
+      httpOnly: true,
+    });
   }
 }
