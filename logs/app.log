@@ -1841,3 +1841,91 @@
   serviceName: 'auth-service',
   timestamp: '2026-05-21T11:26:34.209Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T18:08:56.438Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-21T18:08:56.462Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-21T18:09:03.829Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-21T18:09:15.553Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 3,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-21T18:09:26.869Z'
+}
+{
+  serviceName: 'auth-service',
+  id: '3',
+  level: 'info',
+  message: 'User has been logout',
+  timestamp: '2026-05-21T18:09:50.411Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'info',
+  message: 'Refresh token has been deleted',
+  timestamp: '2026-05-21T18:09:50.416Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-21T18:10:02.421Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-21T18:10:21.851Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-21T18:10:30.524Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-21T18:10:34.613Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 3,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-21T18:10:41.052Z'
+}
+{
+  serviceName: 'auth-service',
+  id: '3',
+  level: 'info',
+  message: 'User has been logout',
+  timestamp: '2026-05-21T18:11:36.600Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'info',
+  message: 'Refresh token has been deleted',
+  timestamp: '2026-05-21T18:11:36.600Z'
+}

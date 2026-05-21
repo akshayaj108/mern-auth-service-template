@@ -114,7 +114,20 @@ export class AuthController {
       next(error);
     }
   }
+  async logout(req: AuthRequest, res: Response, next: NextFunction) {
+    try {
+      await this.tokenService.removeRefreshToken(Number(req.auth.id));
 
+      this.logger.info("User has been logout", { id: req.auth.sub });
+      this.logger.info("Refresh token has been deleted", req.auth.id);
+
+      res.clearCookie("accessToken");
+      res.clearCookie("refreshToken");
+      res.json({});
+    } catch (error) {
+      next(error);
+    }
+  }
   async generateAndSetTokens(
     payload: JwtPayload,
     refreshTokenId: string | null,
