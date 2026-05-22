@@ -742,3 +742,27 @@
   level: 'error',
   timestamp: '2026-05-21T18:10:34.613Z'
 }
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Email or password does not match',
+  level: 'error',
+  timestamp: '2026-05-22T11:06:19.714Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-22T11:09:03.729Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-22T11:09:17.570Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-22T11:09:23.435Z'
+}

@@ -1929,3 +1929,66 @@
   message: 'Refresh token has been deleted',
   timestamp: '2026-05-21T18:11:36.600Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-22T11:06:06.568Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-22T11:06:06.583Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Email or password does not match',
+  level: 'error',
+  timestamp: '2026-05-22T11:06:19.714Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-22T11:06:26.500Z'
+}
+{
+  serviceName: 'auth-service',
+  id: '1',
+  level: 'info',
+  message: 'User has been logout',
+  timestamp: '2026-05-22T11:09:00.968Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'info',
+  message: 'Refresh token has been deleted',
+  timestamp: '2026-05-22T11:09:00.969Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-22T11:09:03.729Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-22T11:09:17.570Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-22T11:09:23.435Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-22T11:09:27.390Z'
+}

@@ -11,10 +11,10 @@ export const AppDataSource = new DataSource({
   password: CONFIG.DB_PASS!,
   database: CONFIG.DB_NAME!,
   //Don't use this prod
-  synchronize: true,
+  synchronize: false,
   // synchronize: CONFIG.NODE_ENV === "test" || CONFIG.NODE_ENV === "dev",
   logging: false,
   entities: [User, RefreshToken],
-  migrations: [],
+  migrations: ["src/migration/*.ts"],
   subscribers: [],
 } as DataSourceOptions);
