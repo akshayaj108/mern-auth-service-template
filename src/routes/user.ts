@@ -22,20 +22,20 @@ router.post(
   (req: Request, res: Response, next: NextFunction) =>
     userController.register(req, res, next),
 );
-// router.get(
-//   "/",
-//   authenticates,
-//   isAccess([Roles.ADMIN]),
-//   (req: Request, res: Response, next: NextFunction) =>
-//     tenantController.get(req, res, next),
-// );
-// router.get(
-//   "/:id",
-//   authenticates,
-//   isAccess([Roles.ADMIN]),
-//   (req: Request, res: Response, next: NextFunction) =>
-//     tenantController.getById(req, res, next),
-// );
+router.get(
+  "/",
+  authenticates,
+  isAccess([Roles.ADMIN]),
+  (req: Request, res: Response, next: NextFunction) =>
+    userController.get(req, res, next),
+);
+router.get(
+  "/:id",
+  authenticates,
+  isAccess([Roles.ADMIN]),
+  (req: Request, res: Response, next: NextFunction) =>
+    userController.getById(req, res, next),
+);
 // router.patch(
 //   "/:id",
 //   authenticates,

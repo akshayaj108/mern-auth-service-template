@@ -1,9 +1,10 @@
-import { NextFunction, Response } from "express";
+import { Request, NextFunction, Response } from "express";
 import { RegisterUserRequest } from "../types";
 import { UserService } from "../services/UserService";
 import { Logger } from "winston";
 import { validationResult } from "express-validator";
 import { Roles } from "../constants";
+import createHttpError from "http-errors";
 
 export class UserController {
   constructor(
@@ -40,6 +41,38 @@ export class UserController {
 
       res.status(201).json({ id: user.id });
     } catch (error) {
+      next(error);
+    }
+  }
+
+  async get(req: Request, res: Response, next: NextFunction) {
+    try {
+      const response = await this.userService.get();
+      res.json(response);
+    } catch (error) {
+      next(error);
+    }
+  }
+  async getById(req: Request, res: Response, next: NextFunction) {
+    const { id } = req.params;
+    try {
+      const response = await this.userService.findById(Number(id));
+      if (!response) {
+        const error = createHttpError(404, "This Id tenant are not exist");
+        next(error);
+        return;
+      }
+      const userWithoutPassword = {
+        id: response.id,
+        firstName: response.firstName,
+        lastName: response.lastName,
+        email: response.email,
+        role: response.role,
+      };
+
+      res.json(userWithoutPassword);
+    } catch (error) {
+      console.log("res++", error);
       next(error);
     }
   }

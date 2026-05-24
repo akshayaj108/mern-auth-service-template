@@ -862,3 +862,15 @@
   level: 'error',
   timestamp: '2026-05-23T10:49:20.753Z'
 }
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-24T11:57:52.466Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Cannot convert object to primitive value',
+  level: 'error',
+  timestamp: '2026-05-24T12:01:34.292Z'
+}
