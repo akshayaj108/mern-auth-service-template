@@ -11,24 +11,23 @@ describe("POST /auth/self", () => {
   let jwks: ReturnType<typeof createJWKSMock>;
   beforeAll(async () => {
     jwks = createJWKSMock("http://localhost:5501");
-
-    jwks.start();
-
     connections = await AppDataSource.initialize();
   });
 
   beforeEach(async () => {
     await connections.dropDatabase();
     await connections.synchronize();
+    jwks.start();
   });
 
   afterAll(async () => {
-    jwks.stop();
     if (connections && connections.isInitialized) {
       await connections.destroy();
     }
   });
-
+  afterEach(async () => {
+    jwks.stop();
+  });
   describe("Given all fields", () => {
     it("should return 200 status code", async () => {
       //arrange

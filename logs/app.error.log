@@ -766,3 +766,99 @@
   level: 'error',
   timestamp: '2026-05-22T11:09:23.435Z'
 }
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred you dont have enough permission',
+  level: 'error',
+  timestamp: '2026-05-23T09:40:49.004Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Cannot set headers after they are sent to the client',
+  level: 'error',
+  timestamp: '2026-05-23T09:45:17.131Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot destructure property 'name' of 'req.body' as it is undefined.",
+  level: 'error',
+  timestamp: '2026-05-23T09:45:42.142Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot destructure property 'name' of 'req.body' as it is undefined.",
+  level: 'error',
+  timestamp: '2026-05-23T09:46:49.226Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot destructure property 'name' of 'req.body' as it is undefined.",
+  level: 'error',
+  timestamp: '2026-05-23T09:47:43.404Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot destructure property 'name' of 'req.body' as it is undefined.",
+  level: 'error',
+  timestamp: '2026-05-23T09:49:05.230Z'
+}
+{
+  serviceName: 'auth-service',
+  message: "An error occurred Cannot destructure property 'name' of 'req.body' as it is undefined.",
+  level: 'error',
+  timestamp: '2026-05-23T09:50:12.487Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred This Id tenant are not exist',
+  level: 'error',
+  timestamp: '2026-05-23T10:12:08.667Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Unable to update, This Id tenant are not exist',
+  level: 'error',
+  timestamp: '2026-05-23T10:35:08.309Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Unable to delete, This Id tenant are not exist',
+  level: 'error',
+  timestamp: '2026-05-23T10:39:53.954Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Expected double-quoted property name in JSON at position 37 (line 4 column 5)',
+  level: 'error',
+  timestamp: '2026-05-23T10:44:27.315Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred null value in column "address" of relation "tenants" violates not-null constraint',
+  level: 'error',
+  timestamp: '2026-05-23T10:44:39.039Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-05-23T10:45:14.443Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Cannot set headers after they are sent to the client',
+  level: 'error',
+  timestamp: '2026-05-23T10:45:35.107Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Expected double-quoted property name in JSON at position 41 (line 4 column 5)',
+  level: 'error',
+  timestamp: '2026-05-23T10:48:51.145Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Cannot set headers after they are sent to the client',
+  level: 'error',
+  timestamp: '2026-05-23T10:49:20.753Z'
+}

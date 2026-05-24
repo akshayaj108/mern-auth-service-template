@@ -18,6 +18,7 @@
     "lint:check": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
     "test": "jest --watchAll --runInBand",
+    "testOnce": "jest --runInBand",
     "prepare": "husky"
   },
   "devDependencies": {
