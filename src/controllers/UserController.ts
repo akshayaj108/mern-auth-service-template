@@ -76,4 +76,25 @@ export class UserController {
       next(error);
     }
   }
+  async update(req: Request, res: Response, next: NextFunction) {
+    const { id } = req.params;
+    const results = validationResult(req);
+    if (!results.isEmpty()) {
+      return res.status(400).json({ errors: results.array() });
+    }
+    try {
+      const response = await this.userService.updateById(Number(id), req.body);
+      if (!response) {
+        const error = createHttpError(
+          404,
+          "Unable to update, This user id is not exist",
+        );
+        next(error);
+        return;
+      }
+      res.json(response);
+    } catch (error) {
+      next(error);
+    }
+  }
 }

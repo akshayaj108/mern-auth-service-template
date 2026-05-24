@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
 import { User } from "../entity/User";
-import { UserData } from "../types";
+import { UpdateUserPayload, UserData } from "../types";
 import createHttpError from "http-errors";
 import bcrypt from "bcrypt";
 
@@ -51,5 +51,12 @@ export class UserService {
   }
   async findById(id: number) {
     return await this.userRepository.findOne({ where: { id } });
+  }
+  async updateById(userId: number, userData: UpdateUserPayload) {
+    const updatedUser = await this.userRepository.update(userId, userData);
+    if (!updatedUser) {
+      return null;
+    }
+    return await this.userRepository.findOneBy({ id: userId });
   }
 }

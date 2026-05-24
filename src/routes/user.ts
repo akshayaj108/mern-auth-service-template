@@ -8,6 +8,7 @@ import { User } from "../entity/User";
 import { UserService } from "../services/UserService";
 import { UserController } from "../controllers/UserController";
 import registerValidators from "../validators/register-validators";
+import updateUserValidator from "../validators/updateUser.validator";
 
 const router = express.Router();
 const userRepo = AppDataSource.getRepository(User);
@@ -36,14 +37,14 @@ router.get(
   (req: Request, res: Response, next: NextFunction) =>
     userController.getById(req, res, next),
 );
-// router.patch(
-//   "/:id",
-//   authenticates,
-//   isAccess([Roles.ADMIN]),
-//   updateTenanatValidator,
-//   (req: Request, res: Response, next: NextFunction) =>
-//     tenantController.update(req, res, next),
-// );
+router.patch(
+  "/:id",
+  authenticates,
+  isAccess([Roles.ADMIN]),
+  updateUserValidator,
+  (req: Request, res: Response, next: NextFunction) =>
+    userController.update(req, res, next),
+);
 // router.delete(
 //   "/:id",
 //   authenticates,
