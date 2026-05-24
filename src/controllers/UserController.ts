@@ -97,4 +97,22 @@ export class UserController {
       next(error);
     }
   }
+
+  async delete(req: Request, res: Response, next: NextFunction) {
+    const { id } = req.params;
+    try {
+      const response = await this.userService.delete(Number(id));
+      if (!response) {
+        const error = createHttpError(
+          404,
+          "Unable to delete, This user id is not exist",
+        );
+        next(error);
+        return;
+      }
+      res.json(response);
+    } catch (error) {
+      next(error);
+    }
+  }
 }

@@ -45,12 +45,12 @@ router.patch(
   (req: Request, res: Response, next: NextFunction) =>
     userController.update(req, res, next),
 );
-// router.delete(
-//   "/:id",
-//   authenticates,
-//   isAccess([Roles.ADMIN]),
-//   (req: Request, res: Response, next: NextFunction) =>
-//     tenantController.delete(req, res, next),
-// );
+router.delete(
+  "/:id",
+  authenticates,
+  isAccess([Roles.ADMIN]),
+  (req: Request, res: Response, next: NextFunction) =>
+    userController.delete(req, res, next),
+);
 
 export default router;

@@ -59,4 +59,11 @@ export class UserService {
     }
     return await this.userRepository.findOneBy({ id: userId });
   }
+  async delete(userId: number) {
+    const response = await this.userRepository.delete(userId);
+    if (response.affected === 0) {
+      return null;
+    }
+    return response;
+  }
 }
