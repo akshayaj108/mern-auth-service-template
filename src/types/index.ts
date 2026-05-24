@@ -4,11 +4,14 @@ export interface UserData {
   lastName: string;
   email: string;
   pass: string;
+  role?: string;
 }
 export interface RegisterRequest extends Request {
   body: UserData;
 }
-
+export interface RegisterUserRequest extends Request {
+  body: UserData;
+}
 export interface AuthRequest extends Request {
   auth: {
     sub: string;
