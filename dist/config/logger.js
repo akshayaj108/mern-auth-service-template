@@ -4,29 +4,29 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const winston_1 = __importDefault(require("winston"));
-// import { CONFIG } from './index.js';
+const _1 = require(".");
 const logger = winston_1.default.createLogger({
-    level: 'info',
+    level: "info",
     defaultMeta: {
-        serviceName: 'auth-service',
+        serviceName: "auth-service",
     },
+    format: winston_1.default.format.combine(winston_1.default.format.timestamp(), winston_1.default.format.prettyPrint()),
     transports: [
         new winston_1.default.transports.File({
-            level: 'info',
-            format: winston_1.default.format.combine(winston_1.default.format.timestamp(), winston_1.default.format.prettyPrint()),
-            dirname: 'logs',
-            filename: 'app.log',
+            level: "info",
+            silent: _1.CONFIG.NODE_ENV === "test",
+            dirname: "logs",
+            filename: "app.log",
         }),
         new winston_1.default.transports.File({
-            level: 'error',
-            format: winston_1.default.format.combine(winston_1.default.format.timestamp(), winston_1.default.format.prettyPrint()),
-            dirname: 'logs',
-            filename: 'app.error.log',
+            level: "error",
+            silent: _1.CONFIG.NODE_ENV === "test",
+            dirname: "logs",
+            filename: "app.error.log",
         }),
         new winston_1.default.transports.Console({
-            level: 'info',
-            format: winston_1.default.format.combine(winston_1.default.format.timestamp(), winston_1.default.format.prettyPrint()),
-            // silent: CONFIG.NODE_ENV === 'test',
+            level: "info",
+            silent: _1.CONFIG.NODE_ENV === "test",
         }),
     ],
 });

@@ -2,7 +2,7 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": ".",
+    "rootDir": "./src",
     "outDir": "./dist",
 
     // Environment Settings
@@ -43,11 +43,14 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext"
   },
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.ts"
-  ],
+  // "include": [
+  //   "src/**/*.ts",
+  //   "tests/**/*.ts"
+  // ],
+  "exclude": ["node_modules, dist, **/*.spec.ts", "tests"],
   "emitDecoratorMetadata": true,
   "experimentalDecorators": true
 }

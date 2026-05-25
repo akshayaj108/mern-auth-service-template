@@ -3039,3 +3039,204 @@
   serviceName: 'auth-service',
   timestamp: '2026-05-24T12:35:27.256Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T05:19:11.197Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T05:19:11.209Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T05:47:32.546Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T05:47:32.557Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T07:51:31.561Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T07:51:31.582Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-25T07:52:18.167Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred you dont have enough permission',
+  level: 'error',
+  timestamp: '2026-05-25T07:52:42.601Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred you dont have enough permission',
+  level: 'error',
+  timestamp: '2026-05-25T07:53:08.534Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred you dont have enough permission',
+  level: 'error',
+  timestamp: '2026-05-25T07:53:11.645Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T07:53:55.741Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T07:53:55.753Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T07:55:16.906Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T07:55:16.916Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:27:07.375Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:27:07.390Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:37:36.513Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:37:36.526Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:40:38.659Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:40:38.668Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:47:00.832Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:47:00.849Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:49:45.294Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:49:45.304Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Error reading private key',
+  level: 'error',
+  timestamp: '2026-05-25T08:49:56.671Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Error reading private key',
+  level: 'error',
+  timestamp: '2026-05-25T08:50:07.876Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:50:23.788Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:50:23.798Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred Error reading private key',
+  level: 'error',
+  timestamp: '2026-05-25T08:50:28.293Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:51:16.973Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-25T08:51:16.983Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-25T08:51:22.421Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 1,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-05-25T08:51:25.592Z'
+}

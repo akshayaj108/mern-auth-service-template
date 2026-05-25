@@ -1,0 +1,1 @@
+{"version":3,"file":"tenantValidator.js","sourceRoot":"","sources":["../../src/validators/tenantValidator.ts"],"names":[],"mappings":";;AAAA,yDAAgD;AAEhD,8EAA8E;AAC9E,kBAAe,IAAA,+BAAW,EAAC;IACzB,IAAI,EAAE;QACJ,YAAY,EAAE,kBAAkB;QAChC,QAAQ,EAAE,IAAI;KACf;IACD,OAAO,EAAE;QACP,YAAY,EAAE,qBAAqB;QACnC,QAAQ,EAAE,IAAI;KACf;CACF,CAAC,CAAC"}
