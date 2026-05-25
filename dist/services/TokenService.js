@@ -4,8 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TokenService = void 0;
-const fs_1 = __importDefault(require("fs"));
-const path_1 = __importDefault(require("path"));
 const jsonwebtoken_1 = require("jsonwebtoken");
 const http_errors_1 = __importDefault(require("http-errors"));
 const config_1 = require("../config");
@@ -16,8 +14,12 @@ class TokenService {
     }
     generateAccessToken(payload) {
         let privateKey;
+        if (!config_1.CONFIG.PRIVATE_KEY) {
+            const error = (0, http_errors_1.default)(500, "SECRET_KEY is not set");
+            throw error;
+        }
         try {
-            privateKey = fs_1.default.readFileSync(path_1.default.join(__dirname, "../../certs/private.pem"));
+            privateKey = config_1.CONFIG.PRIVATE_KEY;
         }
         catch (error) {
             console.log("error in generating private and public key", error);

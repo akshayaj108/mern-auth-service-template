@@ -8,5 +8,6 @@ export declare const CONFIG: {
     DB_NAME: string | undefined;
     REFRESH_TOKEN_SECRET: string | undefined;
     JWKS_URI: string | undefined;
+    PRIVATE_KEY: string | undefined;
 };
 //# sourceMappingURL=index.d.ts.map

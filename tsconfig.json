@@ -47,7 +47,5 @@
     "moduleResolution": "nodenext"
   },
 
-  "exclude": ["node_modules, dist, **/*.spec.ts", "tests"],
-  "emitDecoratorMetadata": true,
-  "experimentalDecorators": true
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "tests"]
 }
