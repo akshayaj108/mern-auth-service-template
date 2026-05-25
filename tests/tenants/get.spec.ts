@@ -10,7 +10,7 @@ describe("GET /tenants", () => {
   let connections: DataSource;
   let jwks: ReturnType<typeof createJWKSMock>;
   let adminToken: string;
-  let managerToken: string;
+
   const existedData = {
     name: "Old Name",
     address: "Old Address",
@@ -29,7 +29,6 @@ describe("GET /tenants", () => {
     await tenantRepo.save(existedData);
     jwks.start();
     adminToken = jwks.token({ sub: "1", role: Roles.ADMIN });
-    managerToken = jwks.token({ sub: "1", role: Roles.MANAGER });
   });
 
   afterAll(async () => {
@@ -53,21 +52,6 @@ describe("GET /tenants", () => {
       expect(response.statusCode).toBe(200);
       expect(tenantData).toHaveLength(1);
       expect(tenantData[0]).toMatchObject(existedData);
-    });
-
-    it("should return 401 status if user is unauthenticated to get all tenants", async () => {
-      //act
-      const response = await request(app).get(`/tenants`);
-      //assert
-      expect(response.statusCode).toBe(401);
-    });
-    it("should return 403 status if user role is not admin to get all tenants", async () => {
-      //act
-      const response = await request(app)
-        .get(`/tenants`)
-        .set("Cookie", [`accessToken=${managerToken}`]);
-      //assert
-      expect(response.statusCode).toBe(403);
     });
   });
 });

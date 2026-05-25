@@ -23,12 +23,8 @@ router.post(
   (req: Request, res: Response, next: NextFunction) =>
     tenantController.create(req, res, next),
 );
-router.get(
-  "/",
-  authenticates,
-  isAccess([Roles.ADMIN]),
-  (req: Request, res: Response, next: NextFunction) =>
-    tenantController.get(req, res, next),
+router.get("/", (req: Request, res: Response, next: NextFunction) =>
+  tenantController.get(req, res, next),
 );
 router.get(
   "/:id",
