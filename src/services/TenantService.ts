@@ -16,6 +16,7 @@ export class TenantService {
   async findById(tenantId: number) {
     return await this.tenantRepo.findOneBy({ id: tenantId });
   }
+
   async updateById(tenantId: number, tenantData: UpdateTenantPaylod) {
     const updatedTenant = await this.tenantRepo.update(tenantId, tenantData);
     if (!updatedTenant) {

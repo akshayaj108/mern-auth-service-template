@@ -30,10 +30,7 @@ export class TenantController {
   async get(req: CreateTenantRequest, res: Response, next: NextFunction) {
     try {
       const response = await this.tenantService.getAll();
-      if (response?.length < 1) {
-        res.send("No record saved in database");
-      }
-
+      this.logger.info("All tenant have been fetched");
       res.json(response);
     } catch (error) {
       next(error);
@@ -41,13 +38,19 @@ export class TenantController {
   }
   async getById(req: CreateTenantRequest, res: Response, next: NextFunction) {
     const { id } = req.params;
+    if (isNaN(Number(id))) {
+      next(createHttpError(400, "Invalid url param."));
+      return;
+    }
     try {
       const response = await this.tenantService.findById(Number(id));
       if (!response) {
-        const error = createHttpError(404, "This Id tenant are not exist");
+        const error = createHttpError(404, "Tenant id does not exits.");
         next(error);
         return;
       }
+
+      this.logger.info("Tenant has been fetched");
       res.json(response);
     } catch (error) {
       next(error);
@@ -55,6 +58,11 @@ export class TenantController {
   }
   async update(req: CreateTenantRequest, res: Response, next: NextFunction) {
     const { id } = req.params;
+    if (isNaN(Number(id))) {
+      next(createHttpError(400, "Invalid url param."));
+      return;
+    }
+
     const result = validationResult(req);
     if (!result.isEmpty()) {
       return res.status(400).json({ errors: result.array() });
@@ -72,6 +80,7 @@ export class TenantController {
         next(error);
         return;
       }
+      this.logger.info("Tenant has been updated", { id: id });
       res.json(response);
     } catch (error) {
       next(error);
@@ -79,6 +88,10 @@ export class TenantController {
   }
   async delete(req: CreateTenantRequest, res: Response, next: NextFunction) {
     const { id } = req.params;
+    if (isNaN(Number(id))) {
+      next(createHttpError(400, "Invalid url param."));
+      return;
+    }
     try {
       const response = await this.tenantService.delete(Number(id));
       if (!response) {
@@ -89,6 +102,7 @@ export class TenantController {
         next(error);
         return;
       }
+      this.logger.info("Tenant has been deleted");
       res.json(response);
     } catch (error) {
       next(error);
