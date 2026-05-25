@@ -12,5 +12,12 @@ module.exports = {
       tsconfig: 'tsconfig.json' // Explicitly tell Jest to use your config
     }],
   },
-  verbose:true
+  verbose:true,
+  collectCoverage: true,
+  coverageProvider: "v8",
+  collectCoverageFrom: [
+    "src/**/*.ts",
+    "!tests/**",
+    "!**/node_modules/**"
+  ]
 };

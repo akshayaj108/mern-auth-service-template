@@ -20,7 +20,8 @@
     "format:fix": "prettier --write \"src/**/*.ts\"",
     "lint:check": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
-    "test": "jest --watchAll --runInBand",
+    "test": "jest --no-cache --coverage --all --runInBand",
+    "test:watch": "jest --watchAll --runInBand",
     "testOnce": "jest --runInBand",
     "prepare": "husky"
   },

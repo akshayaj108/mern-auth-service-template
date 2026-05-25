@@ -9,3 +9,4 @@ temp/
 .emv.prod
 certs/
 public/
+coverage/
