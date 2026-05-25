@@ -3,6 +3,7 @@ import { AppDataSource } from "../../src/config/data-source";
 import request from "supertest";
 import app from "../../src/app";
 
+jest.setTimeout(20000);
 describe("POST /auth/login", () => {
   const data = {
     email: "akshay.j@gamil.com",

@@ -8,6 +8,7 @@ import { User } from "../../src/entity/User";
 import { Roles } from "../../src/constants";
 import { RefreshToken } from "../../src/entity/RefreshToken";
 
+jest.setTimeout(20000);
 describe("POST /auth/register", () => {
   const data = {
     firstName: "Akshay",

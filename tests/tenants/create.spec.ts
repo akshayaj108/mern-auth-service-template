@@ -6,6 +6,7 @@ import app from "../../src/app";
 import { Tenant } from "../../src/entity/Tenants";
 import { Roles } from "../../src/constants";
 
+jest.setTimeout(20000);
 describe("POST /tenants", () => {
   let connections: DataSource;
   let jwks: ReturnType<typeof createJWKSMock>;

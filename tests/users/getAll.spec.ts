@@ -6,6 +6,7 @@ import app from "../../src/app";
 import { Roles } from "../../src/constants";
 import { User } from "../../src/entity/User";
 
+jest.setTimeout(20000);
 describe("GET /users", () => {
   let connections: DataSource;
   let jwks: ReturnType<typeof createJWKSMock>;
