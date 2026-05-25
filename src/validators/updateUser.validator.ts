@@ -25,4 +25,10 @@ export default checkSchema({
     notEmpty: true,
     trim: true,
   },
+  role: {
+    errorMessage: "Role is required!",
+    optional: true,
+    notEmpty: true,
+    trim: true,
+  },
 });

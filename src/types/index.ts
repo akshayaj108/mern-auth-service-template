@@ -5,6 +5,7 @@ export interface UserData {
   email: string;
   pass: string;
   role?: string;
+  tenantId?: number | undefined;
 }
 export interface RegisterRequest extends Request {
   body: UserData;

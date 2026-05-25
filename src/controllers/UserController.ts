@@ -19,7 +19,7 @@ export class UserController {
     if (!result.isEmpty()) {
       return res.status(400).json({ errors: result.array() });
     }
-    const { firstName, lastName, email, pass } = req.body;
+    const { firstName, lastName, email, pass, tenantId } = req.body;
     const managerRole = Roles.MANAGER;
 
     this.logger.debug("Request data to register user", {
@@ -36,6 +36,7 @@ export class UserController {
         email,
         pass,
         role: managerRole,
+        tenantId,
       });
       this.logger.info("Manager User has been registerd", { id: user.id });
 
@@ -55,6 +56,10 @@ export class UserController {
   }
   async getById(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
+    if (isNaN(Number(id))) {
+      next(createHttpError(400, "Invalid url param."));
+      return;
+    }
     try {
       const response = await this.userService.findById(Number(id));
       if (!response) {
@@ -62,15 +67,8 @@ export class UserController {
         next(error);
         return;
       }
-      const userWithoutPassword = {
-        id: response.id,
-        firstName: response.firstName,
-        lastName: response.lastName,
-        email: response.email,
-        role: response.role,
-      };
-
-      res.json(userWithoutPassword);
+      this.logger.info("User has been fetched", { id: response.id });
+      res.json(response);
     } catch (error) {
       console.log("res++", error);
       next(error);
@@ -78,6 +76,10 @@ export class UserController {
   }
   async update(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
+    if (isNaN(Number(id))) {
+      next(createHttpError(400, "Invalid url param."));
+      return;
+    }
     const results = validationResult(req);
     if (!results.isEmpty()) {
       return res.status(400).json({ errors: results.array() });
@@ -92,6 +94,7 @@ export class UserController {
         next(error);
         return;
       }
+      this.logger.info("User has been updated", { id: response.id });
       res.json(response);
     } catch (error) {
       next(error);
@@ -100,6 +103,10 @@ export class UserController {
 
   async delete(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
+    if (isNaN(Number(id))) {
+      next(createHttpError(400, "Invalid url param."));
+      return;
+    }
     try {
       const response = await this.userService.delete(Number(id));
       if (!response) {
@@ -110,6 +117,9 @@ export class UserController {
         next(error);
         return;
       }
+      this.logger.info("User has been deleted", {
+        id: Number(id),
+      });
       res.json(response);
     } catch (error) {
       next(error);

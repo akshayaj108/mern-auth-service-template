@@ -6,16 +6,27 @@ import bcrypt from "bcrypt";
 
 export class UserService {
   constructor(private userRepository: Repository<User>) {}
-  async findByEmail(email: string) {
-    return await this.userRepository.findOne({ where: { email } });
+  async findByEmailWithPassword(email: string) {
+    return await this.userRepository.findOne({
+      where: { email },
+      select: [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "pass",
+        "role",
+        "tenant",
+      ],
+    });
   }
   async getHashPassword(password: string) {
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
     return hashedPassword;
   }
-  async create({ firstName, lastName, email, pass, role }: UserData) {
-    const user = await this.findByEmail(email);
+  async create({ firstName, lastName, email, pass, role, tenantId }: UserData) {
+    const user = await this.findByEmailWithPassword(email);
     if (user) {
       const err = createHttpError(400, "User email is already exists");
       throw err;
@@ -28,6 +39,7 @@ export class UserService {
         email,
         pass: hashedPassword,
         role: role!,
+        tenantId: tenantId ? { id: tenantId } : undefined,
       });
     } catch (error) {
       console.log("err", error);
@@ -39,15 +51,7 @@ export class UserService {
     }
   }
   async get() {
-    const users = await this.userRepository.find();
-    const usersWithoutPassword = users?.map((user) => ({
-      id: user.id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      role: user.role,
-    }));
-    return usersWithoutPassword;
+    return await this.userRepository.find();
   }
   async findById(id: number) {
     return await this.userRepository.findOne({ where: { id } });

@@ -21,7 +21,15 @@ describe("POST /users", () => {
     await connections.synchronize();
     jwks.start();
     adminToken = jwks.token({ sub: "1", role: Roles.ADMIN });
-    managerToken = jwks.token({ sub: "1", role: Roles.MANAGER });
+    managerToken = jwks.token({
+      sub: "1",
+      role: Roles.MANAGER,
+      lastName: "K",
+      email: "rakesh@mern.space",
+      password: "password",
+
+      tenantId: 1,
+    });
   });
 
   afterAll(async () => {

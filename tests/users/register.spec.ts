@@ -103,7 +103,7 @@ describe("POST /auth/register", () => {
       await request(app).post("/auth/register").send(userData);
       //assert
       const userRepository = connections.getRepository(User);
-      const users = await userRepository.find();
+      const users = await userRepository.find({ select: ["pass"] });
       const user = users[0];
       expect(user).toBeDefined();
       expect(user!.pass).not.toBe(userData.pass);
