@@ -27,7 +27,7 @@ describe("GET /users/:ID", () => {
   beforeEach(async () => {
     await connections.dropDatabase();
     await connections.synchronize();
-    await connections.synchronize();
+
     const userRepo = connections.getRepository(User);
 
     await userRepo.save(existedData);

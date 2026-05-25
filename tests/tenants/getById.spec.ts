@@ -24,7 +24,7 @@ describe("GET /tenants/:ID", () => {
   beforeEach(async () => {
     await connections.dropDatabase();
     await connections.synchronize();
-    await connections.synchronize();
+
     const tenantRepo = connections.getRepository(Tenant);
 
     await tenantRepo.save(existedData);
