@@ -1,4 +1,4 @@
-import { DataSource, DataSourceOptions } from "typeorm";
+import { DataSource } from "typeorm";
 import { CONFIG } from ".";
 
 export const AppDataSource = new DataSource({
@@ -15,4 +15,4 @@ export const AppDataSource = new DataSource({
   entities: [__dirname + "/../entity/*.{js,ts}"],
   migrations: [__dirname + "/../migration/*.{js,ts}"],
   subscribers: [],
-} as DataSourceOptions);
+});

@@ -7,6 +7,9 @@ export default expressjwt({
   algorithms: ["HS256"],
   getToken(req: Request) {
     const { refreshToken } = req.cookies;
+    if (typeof refreshToken !== "string") {
+      return undefined;
+    }
     return refreshToken;
   },
 });

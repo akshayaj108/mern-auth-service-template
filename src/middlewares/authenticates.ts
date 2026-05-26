@@ -18,6 +18,9 @@ export default expressjwt({
     }
 
     const { accessToken } = req.cookies;
-    return accessToken;
+    if (typeof accessToken === "string") {
+      return accessToken;
+    }
+    return undefined;
   },
 });

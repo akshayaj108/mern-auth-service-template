@@ -11,10 +11,13 @@ export default expressjwt({
   secret: CONFIG.REFRESH_TOKEN_SECRET!,
   algorithms: ["HS256"],
   getToken(req: Request) {
-    const { refreshToken } = req.cookies;
-    return refreshToken;
+    const refreshToken = req.cookies?.refreshToken as string | undefined;
+    if (refreshToken) {
+      return refreshToken;
+    }
+    return;
   },
-  async isRevoked(req: Request, token) {
+  async isRevoked(_req: Request, token) {
     try {
       const refreshTokenRepo = AppDataSource.getRepository(RefreshToken);
       const refreshToken = await refreshTokenRepo.findOne({
