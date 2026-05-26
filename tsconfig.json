@@ -1,43 +1,80 @@
+// {
+//   // Visit https://aka.ms/tsconfig to read more about this file
+//   "compilerOptions": {
+//     // File Layout
+//     "rootDir": "./src",
+//     "outDir": "./dist",
+
+//     // Environment Settings
+//     // See also https://aka.ms/tsconfig/module
+//     "module": "nodenext",
+//     "target": "es2022",
+//     // "types": ["node"],
+//     // For nodejs:
+//     "lib": ["ES6"],
+//     "types": ["node", "jest"],
+//     // and npm install -D @types/node
+
+//     // Other Outputs
+//     "sourceMap": true,
+//     "declaration": true,
+//     "declarationMap": true,
+
+//     // Stricter Typechecking Options
+//     "noUncheckedIndexedAccess": true,
+//     "exactOptionalPropertyTypes": true,
+
+//     // Style Options
+//     "noImplicitReturns": true,
+//     // "noImplicitOverride": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "noFallthroughCasesInSwitch": true,
+//     // "noPropertyAccessFromIndexSignature": true,
+
+//     // Recommended Options
+//     "experimentalDecorators": true,
+//     "emitDecoratorMetadata": true,
+//     "strictPropertyInitialization": false,
+//     "strict": true,
+//     "jsx": "react-jsx",
+//     "verbatimModuleSyntax": false,
+//     "isolatedModules": true,
+//     "noUncheckedSideEffectImports": true,
+//     "moduleDetection": "force",
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "moduleResolution": "nodenext"
+//   },
+
+//   "exclude": ["node_modules", "dist", "**/*.spec.ts", "tests"]
+// }
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
     "rootDir": "./src",
     "outDir": "./dist",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "es2022",
-    // "types": ["node"],
-    // For nodejs:
-    "lib": ["ES6"],
+    "lib": ["ES2022"],
     "types": ["node", "jest"],
-    // and npm install -D @types/node
 
-    // Other Outputs
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
 
-    // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
 
-    // Recommended Options
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
     "strict": true,
-    "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
@@ -46,6 +83,5 @@
     "esModuleInterop": true,
     "moduleResolution": "nodenext"
   },
-
-  "exclude": ["node_modules", "dist", "**/*.spec.ts", "tests"]
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "tests/**"]
 }

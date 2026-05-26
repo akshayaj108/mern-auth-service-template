@@ -19,14 +19,16 @@
     "format:check": "prettier --check \"src/**/*.ts\"",
     "format:fix": "prettier --write \"src/**/*.ts\"",
     "lint:check": "npx eslint .",
+    "lint:check1": "eslint . --max-warnings 0",
     "lint:fix": "npx eslint . --fix",
+    "type-check": "tsc --noEmit -p tsconfig.json",
     "test": "jest --no-cache --coverage --all --runInBand",
     "test:watch": "jest --watchAll --runInBand",
     "testOnce": "jest --runInBand",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^9.39.4",
     "@types/bcrypt": "^6.0.0",
     "@types/cookie-parser": "^1.4.10",
     "@types/express": "^5.0.6",
@@ -37,7 +39,7 @@
     "@types/supertest": "^6.0.3",
     "@types/winston": "^2.4.4",
     "cross-env": "^10.1.0",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.4",
     "husky": "^9.1.7",
     "jest": "^30.3.0",
     "lint-staged": "^16.2.7",
@@ -48,7 +50,7 @@
     "ts-jest": "^29.4.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.50.0"
+    "typescript-eslint": "^8.60.0"
   },
   "lint-staged": {
     "*.ts": [
