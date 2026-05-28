@@ -29,6 +29,9 @@ export interface TenantPayload {
 }
 export type UpdateTenantPaylod = Partial<TenantPayload>;
 export type UpdateUserPayload = Partial<UserData>;
+export interface UpdateUserRequest extends Request {
+  body: UpdateUserPayload;
+}
 export interface CreateTenantRequest extends Request {
   body: TenantPayload;
 }

@@ -1,5 +1,5 @@
 import { Request, NextFunction, Response } from "express";
-import { RegisterUserRequest } from "../types";
+import { RegisterUserRequest, UpdateUserRequest } from "../types";
 import { UserService } from "../services/UserService";
 import { Logger } from "winston";
 import { validationResult } from "express-validator";
@@ -8,11 +8,9 @@ import createHttpError from "http-errors";
 
 export class UserController {
   constructor(
-    private userService: UserService,
-    private logger: Logger,
-  ) {
-    // this.register = this.register.bind(this);
-  }
+    private readonly userService: UserService,
+    private readonly logger: Logger,
+  ) {}
   async register(req: RegisterUserRequest, res: Response, next: NextFunction) {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
@@ -40,23 +38,23 @@ export class UserController {
       });
       this.logger.info("Manager User has been registerd", { id: user.id });
 
-      res.status(201).json({ id: user.id });
+      return res.status(201).json({ id: user.id });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   }
 
-  async get(req: Request, res: Response, next: NextFunction) {
+  async get(_req: Request, res: Response, next: NextFunction) {
     try {
       const response = await this.userService.get();
-      res.json(response);
+      return res.json(response);
     } catch (error) {
-      next(error);
+      return next(error);
     }
   }
   async getById(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
-    if (isNaN(Number(id))) {
+    if (Number.isNaN(Number(id))) {
       next(createHttpError(400, "Invalid url param."));
       return;
     }
@@ -68,15 +66,14 @@ export class UserController {
         return;
       }
       this.logger.info("User has been fetched", { id: response.id });
-      res.json(response);
+      return res.json(response);
     } catch (error) {
-      console.log("res++", error);
-      next(error);
+      return next(error);
     }
   }
-  async update(req: Request, res: Response, next: NextFunction) {
+  async update(req: UpdateUserRequest, res: Response, next: NextFunction) {
     const { id } = req.params;
-    if (isNaN(Number(id))) {
+    if (Number.isNaN(Number(id))) {
       next(createHttpError(400, "Invalid url param."));
       return;
     }
@@ -95,15 +92,15 @@ export class UserController {
         return;
       }
       this.logger.info("User has been updated", { id: response.id });
-      res.json(response);
+      return res.json(response);
     } catch (error) {
-      next(error);
+      return next(error);
     }
   }
 
   async delete(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
-    if (isNaN(Number(id))) {
+    if (Number.isNaN(Number(id))) {
       next(createHttpError(400, "Invalid url param."));
       return;
     }
@@ -120,9 +117,9 @@ export class UserController {
       this.logger.info("User has been deleted", {
         id: Number(id),
       });
-      res.json(response);
+      return res.json(response);
     } catch (error) {
-      next(error);
+      return next(error);
     }
   }
 }

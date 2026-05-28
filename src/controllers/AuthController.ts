@@ -12,13 +12,11 @@ import { Roles } from "../constants";
 
 export class AuthController {
   constructor(
-    private userService: UserService,
-    private logger: Logger,
-    private tokenService: TokenService,
-    private credentialsService: CredentialsService,
-  ) {
-    // this.register = this.register.bind(this);
-  }
+    private readonly userService: UserService,
+    private readonly logger: Logger,
+    private readonly tokenService: TokenService,
+    private readonly credentialsService: CredentialsService,
+  ) {}
   async register(req: RegisterRequest, res: Response, next: NextFunction) {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
@@ -48,9 +46,9 @@ export class AuthController {
       };
       await this.generateAndSetTokens(payload, null, res, user);
 
-      res.status(201).json({ id: user.id });
+      return res.status(201).json({ id: user.id });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   }
   async login(req: Request, res: Response, next: NextFunction) {
@@ -62,7 +60,9 @@ export class AuthController {
     const { email, pass } = req.body;
 
     try {
-      const user = await this.userService.findByEmailWithPassword(email);
+      const user = await this.userService.findByEmailWithPassword(
+        String(email),
+      );
       if (!user) {
         const err = createHttpError(400, "Email or password does not match");
         next(err);
@@ -70,7 +70,7 @@ export class AuthController {
       }
 
       const isPasswordMatch = await this.credentialsService.comparePassword(
-        pass,
+        String(pass),
         user.pass,
       );
       if (!isPasswordMatch) {
@@ -85,9 +85,9 @@ export class AuthController {
       await this.generateAndSetTokens(payload, null, res, user);
 
       this.logger.info("User has been registerd", { id: user.id });
-      res.status(200).json({ id: user.id });
+      return res.status(200).json({ id: user.id });
     } catch (error) {
-      next(error);
+      return next(error);
     }
   }
   async self(req: AuthRequest, res: Response) {
@@ -106,7 +106,7 @@ export class AuthController {
 
       if (!user) {
         const error = createHttpError(400, "User with token could not find");
-        next!(error);
+        next(error);
         return;
       }
       await this.generateAndSetTokens(payload, req.auth.id!, res, user);
@@ -125,9 +125,9 @@ export class AuthController {
 
       res.clearCookie("accessToken");
       res.clearCookie("refreshToken");
-      res.json({});
+      return res.json({});
     } catch (error) {
-      next(error);
+      return next(error);
     }
   }
   async generateAndSetTokens(
@@ -139,7 +139,7 @@ export class AuthController {
     const accessToken = this.tokenService.generateAccessToken(payload);
 
     //Persist the refresh token
-    const newRefreshToken = await this.tokenService.persistRefreshToken(user!);
+    const newRefreshToken = await this.tokenService.persistRefreshToken(user);
     //update refresh token by deleting old refresh token
     if (refreshTokenId) {
       await this.tokenService.removeRefreshToken(Number(refreshTokenId));
@@ -150,14 +150,14 @@ export class AuthController {
       id: newRefreshToken?.id,
     });
 
-    res!.cookie("accessToken", accessToken, {
+    res.cookie("accessToken", accessToken, {
       domain: "localhost",
       sameSite: "strict",
       maxAge: 1000 * 60 * 60, //1h
       httpOnly: true,
     });
 
-    res!.cookie("refreshToken", refreshToken, {
+    res.cookie("refreshToken", refreshToken, {
       domain: "localhost",
       sameSite: "strict",
       maxAge: 1000 * 60 * 60 * 24 * 365, //1y

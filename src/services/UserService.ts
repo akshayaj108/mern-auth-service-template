@@ -5,19 +5,11 @@ import createHttpError from "http-errors";
 import bcrypt from "bcrypt";
 
 export class UserService {
-  constructor(private userRepository: Repository<User>) {}
+  constructor(private readonly userRepository: Repository<User>) {}
   async findByEmailWithPassword(email: string) {
     return await this.userRepository.findOne({
       where: { email },
-      select: [
-        "id",
-        "firstName",
-        "lastName",
-        "email",
-        "pass",
-        "role",
-        "tenant",
-      ],
+      select: ["id", "firstName", "lastName", "email", "pass", "role"],
     });
   }
   async getHashPassword(password: string) {

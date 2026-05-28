@@ -1,4 +1,4 @@
-import express, { NextFunction, Request, Response } from "express";
+import express, { Request, Response } from "express";
 import "reflect-metadata";
 import { HttpError } from "http-errors";
 import logger from "./config/logger";
@@ -6,12 +6,12 @@ import authRouter from "./routes/auth";
 import userRouter from "./routes/user";
 import tenantRouter from "./routes/tenant";
 import cookieParser from "cookie-parser";
-import path from "path";
+import path from "node:path";
 
 const app = express();
-
+app.disable("x-powered-by");
 app.use(express.json());
-// app.use(express.static(path.join(__dirname, "../public")));
+
 app.use(express.static("public"));
 
 app.use(cookieParser());
@@ -22,17 +22,15 @@ app.use(
   "/.well-known",
   express.static(path.join(__dirname, "../public/.well-known")),
 );
-app.get("/", (req, res) => {
-  // const err = createHttpError(400, "Bad Request Example");
-  // next(err);
+app.get("/", (_req, res) => {
   res.send("Welcome to Auth Service");
 });
 
 app.use("/auth", authRouter);
 app.use("/tenants", tenantRouter);
 app.use("/users", userRouter);
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((err: HttpError, req: Request, res: Response, next: NextFunction) => {
+
+app.use((err: HttpError, _req: Request, res: Response) => {
   logger.error("An error occurred", { message: err.message });
   const statusCode = err.statusCode || err.status || 500;
   res.status(statusCode).json({

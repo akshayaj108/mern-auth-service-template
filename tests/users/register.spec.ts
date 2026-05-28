@@ -71,9 +71,9 @@ describe("POST /auth/register", () => {
       const user = users[0];
       expect(user).toBeDefined();
 
-      expect(user!.firstName).toBe(userData.firstName);
-      expect(user!.lastName).toBe(userData.lastName);
-      expect(user!.email).toBe(userData.email);
+      expect(user.firstName).toBe(userData.firstName);
+      expect(user.lastName).toBe(userData.lastName);
+      expect(user.email).toBe(userData.email);
     });
     it("should return id of created user", async () => {
       //arrange
@@ -95,7 +95,7 @@ describe("POST /auth/register", () => {
       const user = users[0];
       expect(user).toBeDefined();
       expect(user).toHaveProperty("role");
-      expect(user!.role).toBe(Roles.CUSTOMER);
+      expect(user.role).toBe(Roles.CUSTOMER);
     });
     it("should stored only a hashed password", async () => {
       //arrange
@@ -107,9 +107,9 @@ describe("POST /auth/register", () => {
       const users = await userRepository.find({ select: ["pass"] });
       const user = users[0];
       expect(user).toBeDefined();
-      expect(user!.pass).not.toBe(userData.pass);
-      expect(user!.pass).toHaveLength(60);
-      expect(user!.pass).toMatch(/^\$2b\$\d+\$/);
+      expect(user.pass).not.toBe(userData.pass);
+      expect(user.pass).toHaveLength(60);
+      expect(user.pass).toMatch(/^\$2b\$\d+\$/);
     });
     it("should return 400 if user email is already exists in database", async () => {
       //arrange

@@ -1,32 +1,49 @@
 // @ts-check
-
 import eslint from "@eslint/js";
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
+import { fileURLToPath } from "url";
+import path from "path";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(
-  // 1️⃣ Ignore files ESLint must never lint
   {
-    ignores: ["dist", "node_modules", "eslint.config.mjs","jest.config.js",]
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      "coverage/**",
+      "**/*.spec.ts",
+      "tests/**",
+      "eslint.config.mjs",
+      "jest.config.*", 
+         "scripts/**",    // ← add this
+    "**/*.mjs",      // ← add this
+    "**/*.cjs",
+    ],
   },
 
-  // 2️⃣ Base JS rules (safe everywhere)
   eslint.configs.recommended,
-
-  // 3️⃣ TypeScript rules WITHOUT type info (safe everywhere)
   ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
 
-  // 4️⃣ Type-aware rules ONLY for TS source files
   {
     files: ["src/**/*.ts"],
     languageOptions: {
+      parser: tseslint.parser,
       parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      }
+        project: "./tsconfig.json",
+        tsconfigRootDir: __dirname,
+      },
+    },
+    plugins: {
+      "@typescript-eslint": tseslint.plugin,
     },
     rules: {
-      // ...tseslint.configs.recommendedTypeChecked.rules
-    }
+      "no-console": "off",
+      "dot-notation": "error",
+      "@typescript-eslint/require-await": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+    },
   }
 );
