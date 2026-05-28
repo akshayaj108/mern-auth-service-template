@@ -3,7 +3,7 @@ import { Tenant } from "../entity/Tenants";
 import { TenantPayload, UpdateTenantPaylod } from "../types";
 
 export class TenantService {
-  constructor(private tenantRepo: Repository<Tenant>) {}
+  constructor(private readonly tenantRepo: Repository<Tenant>) {}
 
   async create(tenantData: TenantPayload) {
     return await this.tenantRepo.save(tenantData);

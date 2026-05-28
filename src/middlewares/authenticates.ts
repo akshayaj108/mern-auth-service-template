@@ -12,8 +12,8 @@ export default expressjwt({
   algorithms: ["RS256"],
   getToken(req: Request) {
     const authHeader = req.headers.authorization;
-    if (authHeader && authHeader.split(" ")[1] !== undefined) {
-      const token = authHeader.split(" ")[1];
+    const token = authHeader?.split(" ")[1];
+    if (token) {
       return token;
     }
 

@@ -6,10 +6,10 @@ import authRouter from "./routes/auth";
 import userRouter from "./routes/user";
 import tenantRouter from "./routes/tenant";
 import cookieParser from "cookie-parser";
-import path from "path";
+import path from "node:path";
 
 const app = express();
-
+app.disable("x-powered-by");
 app.use(express.json());
 
 app.use(express.static("public"));

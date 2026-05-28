@@ -15,7 +15,7 @@ export default expressjwt({
     if (refreshToken) {
       return refreshToken;
     }
-    return;
+    return undefined;
   },
   async isRevoked(_req: Request, token) {
     try {

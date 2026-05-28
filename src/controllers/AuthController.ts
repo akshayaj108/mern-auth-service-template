@@ -12,13 +12,11 @@ import { Roles } from "../constants";
 
 export class AuthController {
   constructor(
-    private userService: UserService,
-    private logger: Logger,
-    private tokenService: TokenService,
-    private credentialsService: CredentialsService,
-  ) {
-    // this.register = this.register.bind(this);
-  }
+    private readonly userService: UserService,
+    private readonly logger: Logger,
+    private readonly tokenService: TokenService,
+    private readonly credentialsService: CredentialsService,
+  ) {}
   async register(req: RegisterRequest, res: Response, next: NextFunction) {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
