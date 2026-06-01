@@ -6,7 +6,7 @@ tmp/
 temp/
 .env.dev
 .env.test
-.emv.prod
+.env.prod
 certs/
 public/
 coverage/

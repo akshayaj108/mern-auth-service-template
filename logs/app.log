@@ -3252,3 +3252,33 @@
   serviceName: 'auth-service',
   timestamp: '2026-05-28T12:51:35.023Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-01T15:52:42.602Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-01T15:52:42.668Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-01T15:54:05.496Z'
+}
+{
+  message: 'Admin user created successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-01T15:54:05.713Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-01T15:54:05.718Z'
+}
