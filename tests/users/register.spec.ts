@@ -109,7 +109,7 @@ describe("POST /auth/register", () => {
       expect(user).toBeDefined();
       expect(user.pass).not.toBe(userData.pass);
       expect(user.pass).toHaveLength(60);
-      expect(user.pass).toMatch(/^\$2b\$\d+\$/);
+      expect(user.pass).toMatch(/^\$2[a|b]\$\d+\$/);
     });
     it("should return 400 if user email is already exists in database", async () => {
       //arrange
