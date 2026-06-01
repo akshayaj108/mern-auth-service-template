@@ -3240,3 +3240,15 @@
   message: 'User has been registerd',
   timestamp: '2026-05-25T08:51:25.592Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-28T12:51:34.974Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-05-28T12:51:35.023Z'
+}

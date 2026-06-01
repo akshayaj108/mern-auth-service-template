@@ -53,6 +53,13 @@ describe("GET /tenants/:ID", () => {
       //assert
       expect(response.statusCode).toBe(200);
     });
+    it("should return 400 status if tenant id is not a valid number", async () => {
+      const response = await request(app)
+        .get(`/tenants/abc`)
+        .set("Cookie", [`accessToken=${adminToken}`]);
+
+      expect(response.statusCode).toBe(400);
+    });
     it("should return 404 status code and return error message if tenant id is not exist", async () => {
       //arrange
       const tenantRepo = connections.getRepository(Tenant);

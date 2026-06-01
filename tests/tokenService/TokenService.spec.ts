@@ -3,6 +3,8 @@ import { Repository } from "typeorm";
 import { RefreshToken } from "../../src/entity/RefreshToken";
 import { User } from "../../src/entity/User";
 import { CONFIG } from "../../src/config";
+import request from "supertest";
+import app from "../../src/app";
 
 jest.mock("../../src/config", () => ({
   CONFIG: {
@@ -57,6 +59,13 @@ describe("TokenService", () => {
 
       expect(typeof token).toBe("string");
       expect(token.split(".")).toHaveLength(3); // JWT = header.payload.signature
+    });
+    it("should return 401 when no refresh token cookie is present", async () => {
+      const response = await request(app)
+        .post("/auth/refresh")
+        .set("Cookie", [``]); // no refreshToken cookie
+
+      expect(response.statusCode).toBe(401);
     });
   });
 

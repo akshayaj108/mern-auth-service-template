@@ -55,6 +55,13 @@ describe("DELETE /users", () => {
       //assert
       expect(response.statusCode).toBe(200);
     });
+    it("should return 400 status if user id is not a valid number", async () => {
+      const response = await request(app)
+        .delete(`/users/abc`)
+        .set("Cookie", [`accessToken=${adminToken}`]);
+
+      expect(response.statusCode).toBe(400);
+    });
     it("should return 404 status code when user id does not exist in database and user should not be deleted in database", async () => {
       //act
       const notSaveId = 6;

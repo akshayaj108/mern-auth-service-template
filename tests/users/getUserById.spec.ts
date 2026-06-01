@@ -67,6 +67,13 @@ describe("GET /users/:ID", () => {
       expect(response.statusCode).toBe(200);
       expect(response.body).not.toHaveProperty("pass");
     });
+    it("should return 400 status if user id is not a valid number", async () => {
+      const response = await request(app)
+        .get(`/users/abc`)
+        .set("Cookie", [`accessToken=${adminToken}`]);
+
+      expect(response.statusCode).toBe(400);
+    });
     it("should return 404 status code and return error message if user id is not exist", async () => {
       //arrange
       const userRepo = connections.getRepository(User);
