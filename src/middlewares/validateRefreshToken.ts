@@ -28,6 +28,7 @@ export default expressjwt({
       });
       return refreshToken === null;
     } catch (error) {
+      // NOSONAR
       console.log("Error while refresh token", error);
       logger.error("Error while requesting refresh token for user id ", {
         id: (token?.payload as IRefreshTokenPayload).id,

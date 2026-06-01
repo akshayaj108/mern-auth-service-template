@@ -58,7 +58,13 @@ describe("DELETE /tenants", () => {
       //assert
       expect(response.statusCode).toBe(200);
     });
+    it("should return 400 status if tenant id is not a valid number", async () => {
+      const response = await request(app)
+        .delete(`/tenants/abc`)
+        .set("Cookie", [`accessToken=${adminToken}`]);
 
+      expect(response.statusCode).toBe(400);
+    });
     it("should return 404 status code when tenant id data not exist in database", async () => {
       //act
       const notSaveId = 6;

@@ -58,6 +58,14 @@ describe("PATCH /tenants", () => {
       //assert
       expect(response.statusCode).toBe(200);
     });
+    it("should return 400 status if tenant id is not a valid number", async () => {
+      const response = await request(app)
+        .patch(`/tenants/abc`)
+        .set("Cookie", [`accessToken=${adminToken}`])
+        .send({ name: "Test", address: "Test" });
+
+      expect(response.statusCode).toBe(400);
+    });
     it("should return 404 status code when tenant not exist in database and tenant not save update value in database", async () => {
       //act
       const notSaveId = 6;

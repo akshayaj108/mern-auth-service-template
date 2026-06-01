@@ -87,7 +87,14 @@ describe("PATCH /users", () => {
       expect(userData[0]?.firstName).toBe(data?.firstName);
       expect(userData[0]?.email).toBe(data?.email);
     });
+    it("should return 400 status if user id is not a valid number", async () => {
+      const response = await request(app)
+        .patch(`/users/abc`)
+        .set("Cookie", [`accessToken=${adminToken}`])
+        .send({ firstName: "Test", email: "test@test.com" });
 
+      expect(response.statusCode).toBe(400);
+    });
     it("should return 401 status if user is unauthenticated", async () => {
       //act
       const resposne = await request(app).patch(`/users/${id}`).send(data);
