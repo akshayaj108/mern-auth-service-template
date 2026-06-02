@@ -2,7 +2,7 @@ import { Repository } from "typeorm";
 import { User } from "../entity/User";
 import { UpdateUserPayload, UserData } from "../types";
 import createHttpError from "http-errors";
-import bcrypt from "bcryptjs";
+import { getHashPassword } from "../utils";
 
 export class UserService {
   constructor(private readonly userRepository: Repository<User>) {}
@@ -12,11 +12,7 @@ export class UserService {
       select: ["id", "firstName", "lastName", "email", "pass", "role"],
     });
   }
-  async getHashPassword(password: string) {
-    const saltRounds = 10;
-    const hashedPassword = await bcrypt.hash(password, saltRounds);
-    return hashedPassword;
-  }
+
   async create({ firstName, lastName, email, pass, role, tenantId }: UserData) {
     const user = await this.findByEmailWithPassword(email);
     if (user) {
@@ -24,7 +20,7 @@ export class UserService {
       throw err;
     }
     try {
-      const hashedPassword = await this.getHashPassword(pass);
+      const hashedPassword = await getHashPassword(pass);
       return await this.userRepository.save({
         firstName,
         lastName,
