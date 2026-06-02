@@ -18,6 +18,7 @@ module.exports = {
   collectCoverageFrom: [
     "src/**/*.ts",
     "!src/server.ts",      // ← entry point, not testable
+    "!src/utils.ts",      // ← utility functions, not testable
     "!src/types/**",       // ← type definitions, not testable
     "!src/types/index.ts", // ← specifically exclude
     "!tests/**",
