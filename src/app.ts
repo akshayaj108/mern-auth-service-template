@@ -7,9 +7,19 @@ import userRouter from "./routes/user";
 import tenantRouter from "./routes/tenant";
 import cookieParser from "cookie-parser";
 import path from "node:path";
+import cors from "cors";
+import { CONFIG } from "./config";
 
 const app = express();
 app.disable("x-powered-by");
+
+app.use(
+  cors({
+    origin: CONFIG.FRONTEND_URL,
+    credentials: true,
+  }),
+);
+
 app.use(express.json());
 
 app.use(express.static("public"));
