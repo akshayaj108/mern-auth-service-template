@@ -36,3 +36,8 @@ export interface CreateTenantRequest extends Request {
   body: TenantPayload;
 }
 export type UpdateTenantRequest = Partial<CreateTenantRequest>;
+
+export type DataFromQuery = {
+  currentPage: number;
+  perPage: number;
+};

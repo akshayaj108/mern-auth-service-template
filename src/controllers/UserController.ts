@@ -2,10 +2,10 @@ import { Request, NextFunction, Response } from "express";
 import { RegisterUserRequest, UpdateUserRequest } from "../types";
 import { UserService } from "../services/UserService";
 import { Logger } from "winston";
-import { validationResult } from "express-validator";
+import { matchedData, validationResult } from "express-validator";
 import { Roles } from "../constants";
 import createHttpError from "http-errors";
-
+import { DataFromQuery } from "../types";
 export class UserController {
   constructor(
     private readonly userService: UserService,
@@ -43,10 +43,18 @@ export class UserController {
     }
   }
 
-  async get(_req: Request, res: Response, next: NextFunction) {
+  async get(req: Request, res: Response, next: NextFunction) {
+    const validatedQuery: DataFromQuery = matchedData(req, {
+      onlyValidData: true,
+    });
     try {
-      const response = await this.userService.get();
-      return res.json(response);
+      const [response, count] = await this.userService.get(validatedQuery);
+      return res.json({
+        currentPage: validatedQuery.currentPage,
+        perPage: validatedQuery.perPage,
+        total: count,
+        data: response,
+      });
     } catch (error) {
       return next(error);
     }

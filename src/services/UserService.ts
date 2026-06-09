@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
 import { User } from "../entity/User";
-import { UpdateUserPayload, UserData } from "../types";
+import { DataFromQuery, UpdateUserPayload, UserData } from "../types";
 import createHttpError from "http-errors";
 import { getHashPassword } from "../utils";
 import { Tenant } from "../entity/Tenants";
@@ -44,8 +44,14 @@ export class UserService {
       throw customError;
     }
   }
-  async get() {
-    return await this.userRepository.find();
+  async get(queryData: DataFromQuery) {
+    const { currentPage, perPage } = queryData;
+    const queryBuilder = this.userRepository.createQueryBuilder();
+    const results = queryBuilder
+      .skip((currentPage - 1) * perPage)
+      .take(perPage)
+      .getManyAndCount();
+    return results;
   }
   async findById(id: number) {
     return await this.userRepository.findOne({
