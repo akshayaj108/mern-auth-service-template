@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import "reflect-metadata";
 import { HttpError } from "http-errors";
 import logger from "./config/logger";
@@ -40,7 +40,8 @@ app.use("/auth", authRouter);
 app.use("/tenants", tenantRouter);
 app.use("/users", userRouter);
 
-app.use((err: HttpError, _req: Request, res: Response) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use((err: HttpError, _req: Request, res: Response, _next: NextFunction) => {
   logger.error("An error occurred", { message: err.message });
   const statusCode = err.statusCode || err.status || 500;
   res.status(statusCode).json({

@@ -19,13 +19,17 @@ const logger = winston.createLogger({
     }),
     new winston.transports.File({
       level: "error",
-      silent: CONFIG.NODE_ENV === "test",
+      silent: CONFIG.NODE_ENV === "test" || CONFIG.NODE_ENV === "dev",
       dirname: "logs",
       filename: "app.error.log",
     }),
     new winston.transports.Console({
       level: "info",
       silent: CONFIG.NODE_ENV === "test",
+    }),
+    new winston.transports.Console({
+      level: "error",
+      silent: CONFIG.NODE_ENV === "test" || CONFIG.NODE_ENV === "dev",
     }),
   ],
 });

@@ -3,6 +3,7 @@ import logger from "./config/logger";
 import { User } from "./entity/User";
 import bcrypt from "bcryptjs";
 import { Roles } from "./constants";
+import { CONFIG } from "./config";
 
 export async function createAdmin() {
   const userRepository = AppDataSource.getRepository(User);
@@ -16,12 +17,10 @@ export async function createAdmin() {
   }
 
   const adminUser = new User();
-  adminUser.firstName = process.env.ADMIN_FIRST_NAME || "System";
-  adminUser.lastName = process.env.ADMIN_LAST_NAME || "Admin";
-  adminUser.email = process.env.ADMIN_EMAIL || "admin@mern.com";
-  adminUser.pass = await getHashPassword(
-    process.env.ADMIN_PASSWORD || "password",
-  );
+  adminUser.firstName = CONFIG.ADMIN_FIRST_NAME || "System";
+  adminUser.lastName = CONFIG.ADMIN_LAST_NAME || "Admin";
+  adminUser.email = CONFIG.ADMIN_EMAIL || "admin@mern.com";
+  adminUser.pass = await getHashPassword(CONFIG.ADMIN_PASSWORD || "password");
   adminUser.role = adminRole;
 
   try {

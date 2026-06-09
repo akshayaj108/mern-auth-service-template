@@ -3,6 +3,7 @@ import { User } from "../entity/User";
 import { UpdateUserPayload, UserData } from "../types";
 import createHttpError from "http-errors";
 import { getHashPassword } from "../utils";
+import { Tenant } from "../entity/Tenants";
 
 export class UserService {
   constructor(private readonly userRepository: Repository<User>) {}
@@ -21,14 +22,19 @@ export class UserService {
     }
     try {
       const hashedPassword = await getHashPassword(pass);
-      return await this.userRepository.save({
+      const userData: Partial<User> = {
         firstName,
         lastName,
         email,
         pass: hashedPassword,
         role: role!,
-        tenantId: tenantId ? { id: tenantId } : undefined,
-      });
+      };
+
+      if (tenantId) {
+        userData.tenant = { id: tenantId } as Tenant;
+      }
+
+      return await this.userRepository.save(userData);
     } catch (error) {
       console.log("err", error);
       const customError = createHttpError(
@@ -42,7 +48,10 @@ export class UserService {
     return await this.userRepository.find();
   }
   async findById(id: number) {
-    return await this.userRepository.findOne({ where: { id } });
+    return await this.userRepository.findOne({
+      where: { id },
+      relations: ["tenant"],
+    });
   }
   async updateById(userId: number, userData: UpdateUserPayload) {
     const updatedUser = await this.userRepository.update(userId, userData);

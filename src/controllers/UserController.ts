@@ -37,7 +37,6 @@ export class UserController {
         tenantId,
       });
       this.logger.info("Manager User has been registerd", { id: user.id });
-
       return res.status(201).json({ id: user.id });
     } catch (error) {
       return next(error);
