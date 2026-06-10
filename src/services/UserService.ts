@@ -1,4 +1,4 @@
-import { Repository } from "typeorm";
+import { Brackets, Repository } from "typeorm";
 import { User } from "../entity/User";
 import { DataFromQuery, UpdateUserPayload, UserData } from "../types";
 import createHttpError from "http-errors";
@@ -45,11 +45,26 @@ export class UserService {
     }
   }
   async get(queryData: DataFromQuery) {
-    const { currentPage, perPage } = queryData;
-    const queryBuilder = this.userRepository.createQueryBuilder();
+    const { currentPage, perPage, q, role } = queryData;
+    const searchText = `%${q}%`;
+    const queryBuilder = this.userRepository.createQueryBuilder("user");
+
+    if (q) {
+      queryBuilder.where(
+        new Brackets((br) => {
+          br.where("CONCAT(user.firstName, ' ', user.lastName) ILike :q", {
+            q: searchText,
+          }).orWhere("user.email ILike :q", { q: searchText });
+        }),
+      );
+    }
+    if (role) {
+      queryBuilder.andWhere("user.role = :role", { role: role });
+    }
     const results = queryBuilder
       .skip((currentPage - 1) * perPage)
       .take(perPage)
+      .orderBy("user.id", "DESC")
       .getManyAndCount();
     return results;
   }

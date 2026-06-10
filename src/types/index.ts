@@ -40,4 +40,6 @@ export type UpdateTenantRequest = Partial<CreateTenantRequest>;
 export type DataFromQuery = {
   currentPage: number;
   perPage: number;
+  q: string;
+  role: string;
 };
