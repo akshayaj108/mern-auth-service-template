@@ -3282,3 +3282,46 @@
   serviceName: 'auth-service',
   timestamp: '2026-06-01T15:54:05.718Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T13:48:28.955Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T13:48:29.180Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T13:58:09.312Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T13:58:09.411Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-06-10T13:58:58.672Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-10T13:59:09.535Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-06-10T14:02:42.801Z'
+}

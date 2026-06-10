@@ -62,6 +62,7 @@ export class UserService {
       queryBuilder.andWhere("user.role = :role", { role: role });
     }
     const results = queryBuilder
+      .leftJoinAndSelect("user.tenant", "tenant")
       .skip((currentPage - 1) * perPage)
       .take(perPage)
       .orderBy("user.id", "DESC")
