@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
 import { Tenant } from "../entity/Tenants";
-import { TenantPayload, UpdateTenantPaylod } from "../types";
+import { DataFromQuery, TenantPayload, UpdateTenantPaylod } from "../types";
 
 export class TenantService {
   constructor(private readonly tenantRepo: Repository<Tenant>) {}
@@ -9,8 +9,25 @@ export class TenantService {
     return await this.tenantRepo.save(tenantData);
   }
 
-  async getAll() {
-    return await this.tenantRepo.find();
+  async getAll(validatedQuery: DataFromQuery) {
+    const { perPage, currentPage, q } = validatedQuery;
+    const serachText = `%${q}%`;
+    const queryBuilder = this.tenantRepo.createQueryBuilder("tenant");
+    if (q) {
+      queryBuilder
+        .where("tenant.name ILike :q", {
+          q: serachText,
+        })
+        .orWhere("tenant.address ILike :q", {
+          q: serachText,
+        });
+    }
+    const results = queryBuilder
+      .skip((currentPage - 1) * perPage)
+      .take(perPage)
+      .orderBy("tenant.id", "DESC")
+      .getManyAndCount();
+    return results;
   }
 
   async findById(tenantId: number) {

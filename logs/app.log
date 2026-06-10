@@ -3325,3 +3325,189 @@
   level: 'error',
   timestamp: '2026-06-10T14:02:42.801Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:12:23.888Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:12:23.923Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:23:11.660Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:23:11.692Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:24:04.700Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:24:04.734Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:35:16.203Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:35:16.251Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:36:33.355Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:36:33.392Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:37:34.427Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:37:57.641Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:38:06.403Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:38:14.257Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:38:28.182Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:38:34.313Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:38:47.402Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:39:09.553Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:41:28.109Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:48:41.772Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T14:55:21.271Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:00:57.560Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-06-10T15:04:31.940Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:04:38.353Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:05:45.333Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:06:41.365Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:06:58.868Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:07:10.966Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:07:25.149Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:08:55.140Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-10T15:09:52.508Z'
+}

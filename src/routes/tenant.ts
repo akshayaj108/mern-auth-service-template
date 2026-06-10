@@ -9,6 +9,7 @@ import { isAccess } from "../middlewares/canAccess";
 import { Roles } from "../constants";
 import addTenantValidator from "../validators/tenantValidator";
 import updateTenanatValidator from "../validators/updateTenanatValidator";
+import queryValidator from "../validators/queryValidator";
 
 const router = express.Router();
 const tenantRepo = AppDataSource.getRepository(Tenant);
@@ -23,8 +24,11 @@ router.post(
   (req: Request, res: Response, next: NextFunction) =>
     tenantController.create(req, res, next),
 );
-router.get("/", (req: Request, res: Response, next: NextFunction) =>
-  tenantController.get(req, res, next),
+router.get(
+  "/",
+  queryValidator,
+  (req: Request, res: Response, next: NextFunction) =>
+    tenantController.get(req, res, next),
 );
 router.get(
   "/:id",
