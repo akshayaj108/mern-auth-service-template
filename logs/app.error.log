@@ -910,3 +910,15 @@
   level: 'error',
   timestamp: '2026-05-25T08:50:28.293Z'
 }
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-06-11T09:22:45.342Z'
+}
+{
+  serviceName: 'auth-service',
+  message: 'An error occurred No authorization token was found',
+  level: 'error',
+  timestamp: '2026-06-11T09:25:03.970Z'
+}

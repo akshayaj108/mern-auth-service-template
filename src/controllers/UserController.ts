@@ -88,8 +88,15 @@ export class UserController {
     if (!results.isEmpty()) {
       return res.status(400).json({ errors: results.array() });
     }
+    const { firstName, lastName, email, role, tenantId } = req.body;
     try {
-      const response = await this.userService.updateById(Number(id), req.body);
+      const response = await this.userService.updateById(Number(id), {
+        firstName,
+        lastName,
+        role,
+        email,
+        tenantId,
+      });
       if (!response) {
         const error = createHttpError(
           404,
@@ -98,7 +105,7 @@ export class UserController {
         next(error);
         return;
       }
-      this.logger.info("User has been updated", { id: response.id });
+      this.logger.info("User has been updated", { id });
       return res.json(response);
     } catch (error) {
       return next(error);

@@ -1,6 +1,6 @@
 import { Brackets, Repository } from "typeorm";
 import { User } from "../entity/User";
-import { DataFromQuery, UpdateUserPayload, UserData } from "../types";
+import { DataFromQuery, LimitedUserData, UserData } from "../types";
 import createHttpError from "http-errors";
 import { getHashPassword } from "../utils";
 import { Tenant } from "../entity/Tenants";
@@ -75,12 +75,28 @@ export class UserService {
       relations: ["tenant"],
     });
   }
-  async updateById(userId: number, userData: UpdateUserPayload) {
-    const updatedUser = await this.userRepository.update(userId, userData);
-    if (!updatedUser) {
-      return null;
+  async updateById(userId: number, userUpdatedReqData: LimitedUserData) {
+    const { firstName, lastName, role, email, tenantId } = userUpdatedReqData;
+    try {
+      await this.userRepository.update(userId, {
+        firstName,
+        lastName,
+        role,
+        email,
+        tenant: tenantId ? { id: tenantId } : null,
+      });
+      return this.userRepository.findOne({
+        where: { id: userId },
+        relations: ["tenant"],
+      });
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (err) {
+      const error = createHttpError(
+        500,
+        "Failed to update the user in the database",
+      );
+      throw error;
     }
-    return await this.userRepository.findOneBy({ id: userId });
   }
   async delete(userId: number) {
     const response = await this.userRepository.delete(userId);

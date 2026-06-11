@@ -29,9 +29,6 @@ export interface TenantPayload {
 }
 export type UpdateTenantPaylod = Partial<TenantPayload>;
 export type UpdateUserPayload = Partial<UserData>;
-export interface UpdateUserRequest extends Request {
-  body: UpdateUserPayload;
-}
 export interface CreateTenantRequest extends Request {
   body: TenantPayload;
 }
@@ -43,3 +40,14 @@ export type DataFromQuery = {
   q: string;
   role: string;
 };
+
+export interface LimitedUserData {
+  firstName: string;
+  lastName: string;
+  role: string;
+  email: string;
+  tenantId: number;
+}
+export interface UpdateUserRequest extends Request {
+  body: LimitedUserData;
+}
