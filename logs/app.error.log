@@ -922,3 +922,33 @@
   level: 'error',
   timestamp: '2026-06-11T09:25:03.970Z'
 }
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'User email is already exists',
+  timestamp: '2026-06-11T12:11:40.707Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'Email should be valid email',
+  timestamp: '2026-06-11T12:11:48.387Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'User email is already exists',
+  timestamp: '2026-06-11T12:12:01.080Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'Email or password does not match',
+  timestamp: '2026-06-11T12:12:14.605Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'Email or password does not match',
+  timestamp: '2026-06-11T12:13:53.311Z'
+}

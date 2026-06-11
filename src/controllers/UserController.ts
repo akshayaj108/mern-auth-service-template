@@ -15,7 +15,8 @@ export class UserController {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
-      return res.status(400).json({ errors: result.array() });
+      const errors = createHttpError(400, result.array()[0]?.msg as string);
+      next(errors);
     }
     const { firstName, lastName, email, pass, tenantId } = req.body;
     const managerRole = Roles.MANAGER;
@@ -86,7 +87,8 @@ export class UserController {
     }
     const results = validationResult(req);
     if (!results.isEmpty()) {
-      return res.status(400).json({ errors: results.array() });
+      const errors = createHttpError(400, results.array()[0]?.msg as string);
+      next(errors);
     }
     const { firstName, lastName, email, role, tenantId } = req.body;
     try {
