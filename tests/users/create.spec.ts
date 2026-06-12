@@ -162,7 +162,7 @@ describe("POST /users", () => {
       //assert
       expect(response.statusCode).toBe(400);
       expect(users).toHaveLength(0);
-      expect(response.body.errors[0].msg).toBe("Email is required");
+      expect(response.body.errors[0].msg).toBe("Email should be valid email");
     });
     it("should return 400 status code if firstName field is missing", async () => {
       //ararnge

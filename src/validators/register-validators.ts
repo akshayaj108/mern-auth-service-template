@@ -6,7 +6,7 @@ export default checkSchema({
     notEmpty: true,
   },
   email: {
-    errorMessage: "Email is required",
+    errorMessage: "Email should be valid email",
     notEmpty: true,
     trim: true,
     isEmail: true,

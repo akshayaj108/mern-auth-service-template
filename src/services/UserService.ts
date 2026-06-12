@@ -1,8 +1,9 @@
-import { Repository } from "typeorm";
+import { Brackets, Repository } from "typeorm";
 import { User } from "../entity/User";
-import { UpdateUserPayload, UserData } from "../types";
+import { DataFromQuery, LimitedUserData, UserData } from "../types";
 import createHttpError from "http-errors";
 import { getHashPassword } from "../utils";
+import { Tenant } from "../entity/Tenants";
 
 export class UserService {
   constructor(private readonly userRepository: Repository<User>) {}
@@ -21,14 +22,19 @@ export class UserService {
     }
     try {
       const hashedPassword = await getHashPassword(pass);
-      return await this.userRepository.save({
+      const userData: Partial<User> = {
         firstName,
         lastName,
         email,
         pass: hashedPassword,
         role: role!,
-        tenantId: tenantId ? { id: tenantId } : undefined,
-      });
+      };
+
+      if (tenantId) {
+        userData.tenant = { id: tenantId } as Tenant;
+      }
+
+      return await this.userRepository.save(userData);
     } catch (error) {
       console.log("err", error);
       const customError = createHttpError(
@@ -38,18 +44,50 @@ export class UserService {
       throw customError;
     }
   }
-  async get() {
-    return await this.userRepository.find();
+  async get(queryData: DataFromQuery) {
+    const { currentPage, perPage, q, role } = queryData;
+    const searchText = `%${q}%`;
+    const queryBuilder = this.userRepository.createQueryBuilder("user");
+
+    if (q) {
+      queryBuilder.where(
+        new Brackets((br) => {
+          br.where("CONCAT(user.firstName, ' ', user.lastName) ILike :q", {
+            q: searchText,
+          }).orWhere("user.email ILike :q", { q: searchText });
+        }),
+      );
+    }
+    if (role) {
+      queryBuilder.andWhere("user.role = :role", { role: role });
+    }
+    const results = queryBuilder
+      .leftJoinAndSelect("user.tenant", "tenant")
+      .skip((currentPage - 1) * perPage)
+      .take(perPage)
+      .orderBy("user.id", "DESC")
+      .getManyAndCount();
+    return results;
   }
   async findById(id: number) {
-    return await this.userRepository.findOne({ where: { id } });
+    return await this.userRepository.findOne({
+      where: { id },
+      relations: ["tenant"],
+    });
   }
-  async updateById(userId: number, userData: UpdateUserPayload) {
-    const updatedUser = await this.userRepository.update(userId, userData);
-    if (!updatedUser) {
-      return null;
-    }
-    return await this.userRepository.findOneBy({ id: userId });
+  async updateById(userId: number, userUpdatedReqData: LimitedUserData) {
+    const { firstName, lastName, role, email, tenantId } = userUpdatedReqData;
+    await this.userRepository.update(userId, {
+      firstName,
+      lastName,
+      role,
+      email,
+      tenant: tenantId ? { id: tenantId } : null,
+    });
+    return this.userRepository.findOne({
+      where: { id: userId },
+      relations: ["tenant"],
+    });
   }
   async delete(userId: number) {
     const response = await this.userRepository.delete(userId);

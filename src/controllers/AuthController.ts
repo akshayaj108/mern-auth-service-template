@@ -21,7 +21,8 @@ export class AuthController {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
-      return res.status(400).json({ errors: result.array() });
+      const errors = createHttpError(400, result.array()[0]?.msg as string);
+      next(errors);
     }
     const { firstName, lastName, email, pass } = req.body;
     this.logger.debug("Request data to register user", {
@@ -55,7 +56,8 @@ export class AuthController {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
-      return res.status(400).json({ errors: result.array() });
+      const errors = createHttpError(400, result.array()[0]?.msg as string);
+      next(errors);
     }
     const { email, pass } = req.body;
 

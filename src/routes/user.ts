@@ -9,6 +9,7 @@ import { UserService } from "../services/UserService";
 import { UserController } from "../controllers/UserController";
 import registerValidators from "../validators/register-validators";
 import updateUserValidator from "../validators/updateUser.validator";
+import queryValidator from "../validators/queryValidator";
 
 const router = express.Router();
 const userRepo = AppDataSource.getRepository(User);
@@ -27,6 +28,7 @@ router.get(
   "/",
   authenticates,
   isAccess([Roles.ADMIN]),
+  queryValidator,
   (req: Request, res: Response, next: NextFunction) =>
     userController.get(req, res, next),
 );

@@ -64,7 +64,7 @@ describe("GET /users", () => {
         .set("Cookie", [`accessToken=${adminToken}`]);
       //assert
       expect(response.statusCode).toBe(200);
-      expect(response.body[0]).not.toHaveProperty("pass");
+      expect(response.body.data[0]).not.toHaveProperty("pass");
     });
     it("should return 401 status if user is unauthenticated to get all users", async () => {
       //act

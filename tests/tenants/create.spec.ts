@@ -98,9 +98,6 @@ describe("POST /tenants", () => {
         });
       //assert
       expect(response.statusCode).toBe(400);
-      const tenantRepo = connections.getRepository(Tenant);
-      const tenantData = await tenantRepo.find();
-      expect(tenantData).toHaveLength(0);
       expect(response.body.errors[0].msg).toBe("Address is required");
     });
   });

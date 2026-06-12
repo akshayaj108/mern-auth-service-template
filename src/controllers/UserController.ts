@@ -1,8 +1,12 @@
 import { Request, NextFunction, Response } from "express";
-import { RegisterUserRequest, UpdateUserRequest } from "../types";
+import {
+  RegisterUserRequest,
+  UpdateUserRequest,
+  DataFromQuery,
+} from "../types";
 import { UserService } from "../services/UserService";
 import { Logger } from "winston";
-import { validationResult } from "express-validator";
+import { matchedData, validationResult } from "express-validator";
 import { Roles } from "../constants";
 import createHttpError from "http-errors";
 
@@ -15,7 +19,8 @@ export class UserController {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
-      return res.status(400).json({ errors: result.array() });
+      const errors = createHttpError(400, result.array()[0]?.msg as string);
+      next(errors);
     }
     const { firstName, lastName, email, pass, tenantId } = req.body;
     const managerRole = Roles.MANAGER;
@@ -37,17 +42,24 @@ export class UserController {
         tenantId,
       });
       this.logger.info("Manager User has been registerd", { id: user.id });
-
       return res.status(201).json({ id: user.id });
     } catch (error) {
       return next(error);
     }
   }
 
-  async get(_req: Request, res: Response, next: NextFunction) {
+  async get(req: Request, res: Response, next: NextFunction) {
+    const validatedQuery: DataFromQuery = matchedData(req, {
+      onlyValidData: true,
+    });
     try {
-      const response = await this.userService.get();
-      return res.json(response);
+      const [response, count] = await this.userService.get(validatedQuery);
+      return res.json({
+        currentPage: validatedQuery.currentPage,
+        perPage: validatedQuery.perPage,
+        total: count,
+        data: response,
+      });
     } catch (error) {
       return next(error);
     }
@@ -79,7 +91,8 @@ export class UserController {
     }
     const results = validationResult(req);
     if (!results.isEmpty()) {
-      return res.status(400).json({ errors: results.array() });
+      const errors = createHttpError(400, results.array()[0]?.msg as string);
+      next(errors);
     }
     try {
       const response = await this.userService.updateById(Number(id), req.body);
@@ -91,7 +104,7 @@ export class UserController {
         next(error);
         return;
       }
-      this.logger.info("User has been updated", { id: response.id });
+      this.logger.info("User has been updated", { id });
       return res.json(response);
     } catch (error) {
       return next(error);

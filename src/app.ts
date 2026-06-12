@@ -1,7 +1,5 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import "reflect-metadata";
-import { HttpError } from "http-errors";
-import logger from "./config/logger";
 import authRouter from "./routes/auth";
 import userRouter from "./routes/user";
 import tenantRouter from "./routes/tenant";
@@ -9,6 +7,7 @@ import cookieParser from "cookie-parser";
 import path from "node:path";
 import cors from "cors";
 import { CONFIG } from "./config";
+import { globalErrorHandler } from "./middlewares/globalErrorhandler";
 
 const app = express();
 app.disable("x-powered-by");
@@ -40,19 +39,6 @@ app.use("/auth", authRouter);
 app.use("/tenants", tenantRouter);
 app.use("/users", userRouter);
 
-app.use((err: HttpError, _req: Request, res: Response) => {
-  logger.error("An error occurred", { message: err.message });
-  const statusCode = err.statusCode || err.status || 500;
-  res.status(statusCode).json({
-    errors: [
-      {
-        type: err.name,
-        message: err.message,
-        path: "",
-        location: "",
-      },
-    ],
-  });
-});
+app.use(globalErrorHandler);
 
 export default app;

@@ -46,6 +46,87 @@ describe("TokenService", () => {
     });
   });
 
+  describe("generateAndSetTokens", () => {
+    it("should generate tokens and set cookies", async () => {
+      const user = { id: 1 } as User;
+
+      mockRefreshTokenRepo.save.mockResolvedValue({
+        id: 100,
+      } as RefreshToken);
+
+      const mockResponse = {
+        cookie: jest.fn(),
+      } as any;
+
+      jest
+        .spyOn(tokenService, "generateAccessToken")
+        .mockReturnValue("access-token");
+
+      jest
+        .spyOn(tokenService, "generateRefreshToken")
+        .mockReturnValue("refresh-token");
+
+      await tokenService.generateAndSetTokens(
+        {
+          sub: "1",
+          role: "admin",
+        },
+        null,
+        mockResponse,
+        user,
+      );
+
+      expect(mockResponse.cookie).toHaveBeenCalledTimes(2);
+
+      expect(mockResponse.cookie).toHaveBeenCalledWith(
+        "accessToken",
+        "access-token",
+        expect.any(Object),
+      );
+
+      expect(mockResponse.cookie).toHaveBeenCalledWith(
+        "refreshToken",
+        "refresh-token",
+        expect.any(Object),
+      );
+    });
+
+    it("should delete old refresh token when refreshTokenId exists", async () => {
+      const user = { id: 1 } as User;
+
+      mockRefreshTokenRepo.save.mockResolvedValue({
+        id: 100,
+      } as RefreshToken);
+
+      const mockResponse = {
+        cookie: jest.fn(),
+      } as any;
+
+      const removeSpy = jest
+        .spyOn(tokenService, "removeRefreshToken")
+        .mockResolvedValue({} as any);
+
+      jest
+        .spyOn(tokenService, "generateAccessToken")
+        .mockReturnValue("access-token");
+
+      jest
+        .spyOn(tokenService, "generateRefreshToken")
+        .mockReturnValue("refresh-token");
+
+      await tokenService.generateAndSetTokens(
+        {
+          sub: "1",
+          role: "admin",
+        },
+        "99",
+        mockResponse,
+        user,
+      );
+
+      expect(removeSpy).toHaveBeenCalledWith(99);
+    });
+  });
   // ← ADD THIS NEW BLOCK
   describe("generateRefreshToken", () => {
     it("should generate a refresh token string", () => {
