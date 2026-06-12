@@ -1000,3 +1000,75 @@
   message: 'No authorization token was found',
   timestamp: '2026-06-11T18:49:37.599Z'
 }
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:08:20.799Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:19:04.609Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:19:12.387Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:23:35.364Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:23:49.270Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:24:11.322Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:24:43.449Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:24:53.198Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:25:55.364Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:27:38.101Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:27:43.356Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T04:29:37.088Z'
+}

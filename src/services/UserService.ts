@@ -77,26 +77,17 @@ export class UserService {
   }
   async updateById(userId: number, userUpdatedReqData: LimitedUserData) {
     const { firstName, lastName, role, email, tenantId } = userUpdatedReqData;
-    try {
-      await this.userRepository.update(userId, {
-        firstName,
-        lastName,
-        role,
-        email,
-        tenant: tenantId ? { id: tenantId } : null,
-      });
-      return this.userRepository.findOne({
-        where: { id: userId },
-        relations: ["tenant"],
-      });
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (err) {
-      const error = createHttpError(
-        500,
-        "Failed to update the user in the database",
-      );
-      throw error;
-    }
+    await this.userRepository.update(userId, {
+      firstName,
+      lastName,
+      role,
+      email,
+      tenant: tenantId ? { id: tenantId } : null,
+    });
+    return this.userRepository.findOne({
+      where: { id: userId },
+      relations: ["tenant"],
+    });
   }
   async delete(userId: number) {
     const response = await this.userRepository.delete(userId);

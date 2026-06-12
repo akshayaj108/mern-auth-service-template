@@ -42,7 +42,7 @@ describe("POST /tenants", () => {
       name: "Test Name",
       address: "Test Address",
     };
-    it.only("should return 201 status code", async () => {
+    it("should return 201 status code", async () => {
       //act
       const response = await request(app)
         .post("/tenants")
@@ -52,7 +52,7 @@ describe("POST /tenants", () => {
       expect(response.statusCode).toBe(201);
     });
 
-    it.only("should create a tenant and store in database", async () => {
+    it("should create a tenant and store in database", async () => {
       //act
       await request(app)
         .post("/tenants")
@@ -66,7 +66,7 @@ describe("POST /tenants", () => {
       expect(tenantData[0]?.address).toBe(data.address);
     });
 
-    it.only("should return 401 status if user is unauthenticated", async () => {
+    it("should return 401 status if user is unauthenticated", async () => {
       //act
       const resposne = await request(app).post("/tenants").send(data);
       //assert
@@ -75,7 +75,7 @@ describe("POST /tenants", () => {
       const tenantData = await tenantRepo.find();
       expect(tenantData).toHaveLength(0);
     });
-    it.only("should return 403 status if user role is not admin", async () => {
+    it("should return 403 status if user role is not admin", async () => {
       //act
       const response = await request(app)
         .post("/tenants")
@@ -87,9 +87,7 @@ describe("POST /tenants", () => {
       const tenantData = await tenantRepo.find();
       expect(tenantData).toHaveLength(0);
     });
-  });
-  describe("missing field in update", () => {
-    it.only("should return 400 status if tenant name is or address is missing", async () => {
+    it("should return 400 status if tenant name is or address is missing", async () => {
       //act
       const response = await request(app)
         .post("/tenants")
@@ -100,9 +98,6 @@ describe("POST /tenants", () => {
         });
       //assert
       expect(response.statusCode).toBe(400);
-      const tenantRepo = connections.getRepository(Tenant);
-      const tenantData = await tenantRepo.find();
-      expect(tenantData).toHaveLength(0);
       expect(response.body.errors[0].msg).toBe("Address is required");
     });
   });

@@ -1,11 +1,15 @@
 import { Request, NextFunction, Response } from "express";
-import { RegisterUserRequest, UpdateUserRequest } from "../types";
+import {
+  RegisterUserRequest,
+  UpdateUserRequest,
+  DataFromQuery,
+} from "../types";
 import { UserService } from "../services/UserService";
 import { Logger } from "winston";
 import { matchedData, validationResult } from "express-validator";
 import { Roles } from "../constants";
 import createHttpError from "http-errors";
-import { DataFromQuery } from "../types";
+
 export class UserController {
   constructor(
     private readonly userService: UserService,
