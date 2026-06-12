@@ -16,6 +16,7 @@ export class TenantController {
     if (!result.isEmpty()) {
       const errors = createHttpError(400, result.array()[0]?.msg as string);
       next(errors);
+      return;
     }
     const { name, address } = req.body;
     try {
