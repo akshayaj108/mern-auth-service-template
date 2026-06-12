@@ -4332,3 +4332,654 @@
   serviceName: 'auth-service',
   timestamp: '2026-06-11T12:23:50.574Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:39:34.360Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:39:34.461Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:40:22.566Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:40:22.599Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:45:30.163Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:45:30.196Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:48:53.335Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:48:53.362Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:49:50.848Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:49:50.875Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T12:52:03.856Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:52:09.237Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:53:21.239Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:53:21.575Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:57:07.583Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T12:57:07.635Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T12:57:43.544Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T13:03:15.113Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T13:03:15.147Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T13:04:07.173Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T17:58:20.798Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:01:21.384Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:01:21.414Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:03:14.326Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:05:41.367Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:05:41.425Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:06:29.765Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:06:58.113Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:06:58.161Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:07:37.935Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:08:26.253Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'Tenant Id is required!',
+  timestamp: '2026-06-11T18:08:47.482Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:09:30.871Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:09:30.901Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:10:16.896Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:10:16.940Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:10:43.804Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:10:43.872Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:11:30.871Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:11:30.911Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:12:43.764Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:12:43.796Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:13:18.920Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:13:19.012Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:13:43.333Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:13:43.365Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:15:27.104Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:15:27.178Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:18:26.907Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:18:26.950Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:18:55.134Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:18:55.193Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:20:30.360Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:20:30.398Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:26:16.780Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:26:16.821Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:27:05.567Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:27:05.604Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:28:43.605Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:29:31.805Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:29:31.846Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:30:40.722Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:30:40.786Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:31:35.236Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:31:35.269Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:33:00.472Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:38:00.782Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:38:00.820Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:38:43.085Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:38:43.119Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:39:57.251Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:39:57.288Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:48:21.025Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:48:21.065Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:49:37.599Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:49:56.219Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:49:56.252Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:54:49.075Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:54:49.167Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:57:14.513Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:57:14.556Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:57:50.077Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-11T18:57:50.117Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:25:50.823Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:25:50.917Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:27:23.338Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:27:23.382Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:27:51.137Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:27:51.165Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:30:11.177Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:30:11.216Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:31:46.469Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:31:46.501Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:32:54.621Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:32:54.669Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:33:48.654Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:33:48.689Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T02:34:35.838Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:35:00.986Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'Failed to update the user in the database',
+  timestamp: '2026-06-12T02:35:13.458Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:38:10.211Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:38:10.245Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'Failed to update the user in the database',
+  timestamp: '2026-06-12T02:38:25.369Z'
+}
+{
+  serviceName: 'auth-service',
+  id: '15',
+  level: 'info',
+  message: 'User has been updated',
+  timestamp: '2026-06-12T02:39:18.607Z'
+}
+{
+  serviceName: 'auth-service',
+  id: '15',
+  level: 'info',
+  message: 'User has been updated',
+  timestamp: '2026-06-12T02:39:27.525Z'
+}
+{
+  serviceName: 'auth-service',
+  id: '15',
+  level: 'info',
+  message: 'User has been updated',
+  timestamp: '2026-06-12T02:39:59.189Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:40:34.633Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T02:40:34.665Z'
+}

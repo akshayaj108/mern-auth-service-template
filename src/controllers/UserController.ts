@@ -90,15 +90,8 @@ export class UserController {
       const errors = createHttpError(400, results.array()[0]?.msg as string);
       next(errors);
     }
-    const { firstName, lastName, email, role, tenantId } = req.body;
     try {
-      const response = await this.userService.updateById(Number(id), {
-        firstName,
-        lastName,
-        role,
-        email,
-        tenantId,
-      });
+      const response = await this.userService.updateById(Number(id), req.body);
       if (!response) {
         const error = createHttpError(
           404,

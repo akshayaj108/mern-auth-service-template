@@ -5,6 +5,8 @@ import createJWKSMock from "mock-jwks";
 import app from "../../src/app";
 import { Roles } from "../../src/constants";
 import { User } from "../../src/entity/User";
+import { Tenant } from "../../src/entity/Tenants";
+import { UserData } from "../../src/types";
 
 jest.setTimeout(20000);
 describe("PATCH /users", () => {
@@ -12,13 +14,8 @@ describe("PATCH /users", () => {
   let jwks: ReturnType<typeof createJWKSMock>;
   let adminToken: string;
   let managerToken: string;
-  const existedData = {
-    firstName: "Akshay",
-    lastName: "J",
-    email: "akshay.j@gamil.com",
-    pass: "secret",
-    role: Roles.MANAGER,
-  };
+  let existedData: UserData;
+
   beforeAll(async () => {
     jwks = createJWKSMock("http://localhost:5501");
 
@@ -28,9 +25,25 @@ describe("PATCH /users", () => {
   beforeEach(async () => {
     await connections.dropDatabase();
     await connections.synchronize();
+
+    const tenantRepo = connections.getRepository(Tenant);
     const userRepo = connections.getRepository(User);
 
+    const tenant = await tenantRepo.save({
+      name: "Test Tenant",
+      address: "abc State",
+    });
+
+    existedData = {
+      firstName: "Akshay",
+      lastName: "J",
+      email: "akshay.j@gamil.com",
+      pass: "secret",
+      role: Roles.MANAGER,
+      tenantId: tenant.id,
+    };
     await userRepo.save(existedData);
+
     jwks.start();
     adminToken = jwks.token({ sub: "1", role: Roles.ADMIN });
     managerToken = jwks.token({ sub: "1", role: Roles.MANAGER });
@@ -49,7 +62,10 @@ describe("PATCH /users", () => {
     const id = 1;
     const data = {
       firstName: "Updated Name",
+      lastName: "Updated Last Name",
       email: "test@gmail.com",
+      role: "manager",
+      tenantId: id,
     };
     it("should return 200 status code after user updated", async () => {
       //act
@@ -64,7 +80,7 @@ describe("PATCH /users", () => {
       //act
       const notSaveId = 6;
       const response = await request(app)
-        .delete(`/users/${notSaveId}`)
+        .patch(`/users/${notSaveId}`)
         .set("Cookie", [`accessToken=${adminToken}`])
         .send(data);
       //assert

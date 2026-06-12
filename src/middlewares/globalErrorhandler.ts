@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { HttpError } from "http-errors";
 import { CONFIG } from "../config";
 import logger from "../config/logger";
-import { v4 as uuid4 } from "uuid";
+import crypto from "node:crypto";
 
 export const globalErrorHandler = (
   err: HttpError,
@@ -11,7 +11,7 @@ export const globalErrorHandler = (
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _next: NextFunction,
 ) => {
-  const errorId = uuid4;
+  const errorId = crypto.randomUUID();
   const statusCode = err.status;
   const isProduction = CONFIG.NODE_ENV === "production";
   const message = isProduction ? "Internal server error" : err.message;

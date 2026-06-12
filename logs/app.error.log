@@ -952,3 +952,51 @@
   message: 'Email or password does not match',
   timestamp: '2026-06-11T12:13:53.311Z'
 }
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T12:57:43.544Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T13:04:07.173Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:03:14.326Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:06:29.765Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:07:37.935Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:28:43.605Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:33:00.472Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-11T18:49:37.599Z'
+}

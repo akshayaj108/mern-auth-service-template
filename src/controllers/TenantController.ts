@@ -14,7 +14,8 @@ export class TenantController {
     const result = validationResult(req);
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
-      return res.status(400).json({ errors: result.array() });
+      const errors = createHttpError(400, result.array()[0]?.msg as string);
+      next(errors);
     }
     const { name, address } = req.body;
     try {
