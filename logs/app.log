@@ -5067,3 +5067,285 @@
   message: 'No authorization token was found',
   timestamp: '2026-06-12T04:29:37.088Z'
 }
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T14:03:35.094Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T14:03:35.227Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-12T14:24:44.843Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'Email or password does not match',
+  timestamp: '2026-06-12T14:26:10.199Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-12T14:26:52.305Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-12T14:30:50.933Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-12T14:32:59.859Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T15:36:46.634Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T15:36:46.774Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-12T15:38:13.590Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T15:51:40.581Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T15:51:40.612Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-12T15:52:04.627Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T17:22:51.839Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T17:22:51.939Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-12T17:23:56.161Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T17:59:01.561Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-12T17:59:01.825Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-12T18:27:37.492Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-13T05:42:39.097Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-13T05:42:39.335Z'
+}
+{
+  serviceName: 'auth-service',
+  level: 'error',
+  message: 'No authorization token was found',
+  timestamp: '2026-06-13T06:04:01.660Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-13T06:04:12.160Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-13T06:05:39.752Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-13T11:49:03.305Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-13T11:49:03.462Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-13T16:57:55.577Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-13T16:57:55.872Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:01:03.658Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:01:04.012Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:16:24.494Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:16:24.525Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:17:48.737Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:17:48.772Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:18:45.987Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:18:46.029Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:24:09.533Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:24:09.589Z'
+}
+{
+  message: 'Database connected successfully.',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:24:24.758Z'
+}
+{
+  message: 'Server started on port 5501',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:24:24.945Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 6,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-14T11:26:08.574Z'
+}
+{
+  message: 'All tenant have been fetched',
+  level: 'info',
+  serviceName: 'auth-service',
+  timestamp: '2026-06-14T11:26:34.570Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 11,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-14T11:28:57.334Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 9,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-14T11:50:49.196Z'
+}
+{
+  serviceName: 'auth-service',
+  id: 9,
+  level: 'info',
+  message: 'User has been registerd',
+  timestamp: '2026-06-14T11:56:50.380Z'
+}

@@ -83,6 +83,7 @@ export class AuthController {
       const payload: JwtPayload = {
         sub: String(user.id),
         role: user.role,
+        tenantId: user.tenant?.id,
       };
       await this.generateAndSetTokens(payload, null, res, user);
 
@@ -99,11 +100,6 @@ export class AuthController {
 
   async refreshToken(req: AuthRequest, res: Response, next: NextFunction) {
     try {
-      const payload: JwtPayload = {
-        sub: String(req.auth.sub),
-        role: req.auth.role,
-      };
-
       const user = await this.userService.findById(Number(req.auth.sub));
 
       if (!user) {
@@ -111,6 +107,12 @@ export class AuthController {
         next(error);
         return;
       }
+
+      const payload: JwtPayload = {
+        sub: String(req.auth.sub),
+        role: req.auth.role,
+        tenantId: user.tenant?.id,
+      };
       await this.generateAndSetTokens(payload, req.auth.id!, res, user);
 
       res.status(200).json({ id: user.id });

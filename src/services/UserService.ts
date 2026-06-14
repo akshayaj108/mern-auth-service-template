@@ -11,6 +11,7 @@ export class UserService {
     return await this.userRepository.findOne({
       where: { email },
       select: ["id", "firstName", "lastName", "email", "pass", "role"],
+      relations: ["tenant"],
     });
   }
 
