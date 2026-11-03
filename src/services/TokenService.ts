@@ -73,14 +73,14 @@ export class TokenService {
     });
 
     res.cookie("accessToken", accessToken, {
-      domain: "localhost",
+      domain: CONFIG.MAIN_DOMAIN,
       sameSite: "strict",
       maxAge: 1000 * 60 * 60, //1h
       httpOnly: true,
     });
 
     res.cookie("refreshToken", refreshToken, {
-      domain: "localhost",
+      domain: CONFIG.MAIN_DOMAIN,
       sameSite: "strict",
       maxAge: 1000 * 60 * 60 * 24 * 365, //1y
       httpOnly: true,
