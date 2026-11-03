@@ -21,6 +21,7 @@ const {
   ADMIN_EMAIL,
   ADMIN_PASSWORD,
   FRONTEND_URL,
+  CLIENT_UI_URL
 } = process.env;
 
 export const CONFIG = {
@@ -39,4 +40,7 @@ export const CONFIG = {
   ADMIN_EMAIL,
   ADMIN_PASSWORD,
   FRONTEND_URL,
+  CLIENT_UI_URL
 };
+
+export const ALLOWED_DOMAIN: string[] = [CLIENT_UI_URL as string, FRONTEND_URL as string]

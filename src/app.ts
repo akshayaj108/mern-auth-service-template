@@ -6,7 +6,7 @@ import tenantRouter from "./routes/tenant";
 import cookieParser from "cookie-parser";
 import path from "node:path";
 import cors from "cors";
-import { CONFIG } from "./config";
+import { ALLOWED_DOMAIN } from "./config";
 import { globalErrorHandler } from "./middlewares/globalErrorhandler";
 
 const app = express();
@@ -14,7 +14,7 @@ app.disable("x-powered-by");
 
 app.use(
   cors({
-    origin: CONFIG.FRONTEND_URL,
+    origin: ALLOWED_DOMAIN,
     credentials: true,
   }),
 );
