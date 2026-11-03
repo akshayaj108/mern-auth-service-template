@@ -60,11 +60,12 @@ export class AuthController {
       next(errors);
     }
     const { email, pass } = req.body;
-
+    
     try {
       const user = await this.userService.findByEmailWithPassword(
         String(email),
       );
+
       if (!user) {
         const err = createHttpError(400, "Email or password does not match");
         next(err);
@@ -75,6 +76,7 @@ export class AuthController {
         String(pass),
         user.pass,
       );
+
       if (!isPasswordMatch) {
         const err = createHttpError(400, "Email or password does not match");
         next(err);
@@ -83,10 +85,12 @@ export class AuthController {
       const payload: JwtPayload = {
         sub: String(user.id),
         role: user.role,
+        firstName: user.firstName,
+        lastname: user.lastName,
+        email: user.email,
         tenantId: user.tenant?.id,
       };
-      await this.generateAndSetTokens(payload, null, res, user);
-
+      await this.generateAndSetTokens(payload, null, res, user);  
       this.logger.info("User has been registerd", { id: user.id });
       return res.status(200).json({ id: user.id });
     } catch (error) {
@@ -111,6 +115,9 @@ export class AuthController {
       const payload: JwtPayload = {
         sub: String(req.auth.sub),
         role: req.auth.role,
+        firstName: user.firstName,
+        lastname: user.lastName,
+        email: user.email,
         tenantId: user.tenant?.id,
       };
       await this.generateAndSetTokens(payload, req.auth.id!, res, user);

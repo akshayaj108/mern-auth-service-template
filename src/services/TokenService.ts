@@ -9,7 +9,7 @@ import { User } from "../entity/User";
 export class TokenService {
   constructor(private readonly refreshTokenRepo: Repository<RefreshToken>) {}
 
-  generateAccessToken(payload: JwtPayload) {
+   generateAccessToken(payload: JwtPayload) {
     let privateKey: string;
     if (!CONFIG.PRIVATE_KEY) {
       const error = createHttpError(500, "SECRET_KEY is not set");
