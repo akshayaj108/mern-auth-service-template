@@ -9,6 +9,7 @@ import createHttpError from "http-errors";
 import { CredentialsService } from "../services/CredintialService";
 import { User } from "../entity/User";
 import { Roles } from "../constants";
+import { CONFIG } from "../config";
 
 export class AuthController {
   constructor(
@@ -22,7 +23,7 @@ export class AuthController {
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
       const errors = createHttpError(400, result.array()[0]?.msg as string);
-      next(errors);
+      return next(errors);
     }
     const { firstName, lastName, email, pass } = req.body;
     this.logger.debug("Request data to register user", {
@@ -57,14 +58,15 @@ export class AuthController {
     //validation - checkin error array is empty or not if not empty then return resposne
     if (!result.isEmpty()) {
       const errors = createHttpError(400, result.array()[0]?.msg as string);
-      next(errors);
+      return next(errors);
     }
     const { email, pass } = req.body;
-
+    
     try {
       const user = await this.userService.findByEmailWithPassword(
         String(email),
       );
+
       if (!user) {
         const err = createHttpError(400, "Email or password does not match");
         next(err);
@@ -75,6 +77,7 @@ export class AuthController {
         String(pass),
         user.pass,
       );
+
       if (!isPasswordMatch) {
         const err = createHttpError(400, "Email or password does not match");
         next(err);
@@ -83,9 +86,12 @@ export class AuthController {
       const payload: JwtPayload = {
         sub: String(user.id),
         role: user.role,
+        firstName: user.firstName,
+        lastname: user.lastName,
+        email: user.email,
+        tenantId: user.tenant?.id,
       };
-      await this.generateAndSetTokens(payload, null, res, user);
-
+      await this.generateAndSetTokens(payload, null, res, user);  
       this.logger.info("User has been registerd", { id: user.id });
       return res.status(200).json({ id: user.id });
     } catch (error) {
@@ -99,11 +105,6 @@ export class AuthController {
 
   async refreshToken(req: AuthRequest, res: Response, next: NextFunction) {
     try {
-      const payload: JwtPayload = {
-        sub: String(req.auth.sub),
-        role: req.auth.role,
-      };
-
       const user = await this.userService.findById(Number(req.auth.sub));
 
       if (!user) {
@@ -111,6 +112,15 @@ export class AuthController {
         next(error);
         return;
       }
+
+      const payload: JwtPayload = {
+        sub: String(req.auth.sub),
+        role: req.auth.role,
+        firstName: user.firstName,
+        lastname: user.lastName,
+        email: user.email,
+        tenantId: user.tenant?.id,
+      };
       await this.generateAndSetTokens(payload, req.auth.id!, res, user);
 
       res.status(200).json({ id: user.id });
@@ -153,14 +163,14 @@ export class AuthController {
     });
 
     res.cookie("accessToken", accessToken, {
-      domain: "localhost",
+      domain: CONFIG.MAIN_DOMAIN,
       sameSite: "strict",
       maxAge: 1000 * 60 * 60, //1h
       httpOnly: true,
     });
 
     res.cookie("refreshToken", refreshToken, {
-      domain: "localhost",
+      domain: CONFIG.MAIN_DOMAIN,
       sameSite: "strict",
       maxAge: 1000 * 60 * 60 * 24 * 365, //1y
       httpOnly: true,
