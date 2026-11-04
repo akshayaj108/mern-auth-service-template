@@ -1,3 +1,5 @@
+import { exec } from "node:child_process";
+
 // Function to run the migration command
 function runMigration() {
     // Execute the npm run migration command
